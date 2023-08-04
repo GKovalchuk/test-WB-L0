@@ -1,0 +1,19 @@
+{
+	"name": "wbl0",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"stylelint": "stylelint \"**/*.css\" --fix"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"stylelint": "^15.10.2",
+		"stylelint-config-standard": "^34.0.0"
+	},
+	"dependencies": {
+		"stylelint-config-property-sort-order-smacss": "^9.1.0"
+	}
+}

@@ -1,0 +1,41 @@
+.tabbar {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	flex-wrap: wrap;
+	align-content: center;
+	width: 100%;
+	min-width: 32rem;
+	height: var(--height__tabbar);
+	padding-top: 0.3rem;
+	background: var(--system-white);
+}
+
+.tabbar__links {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 1.3rem;
+}
+
+.tabbar__links svg {
+	fill: var(--not-active-color);
+}
+
+.tabbar__link {
+	position: relative;
+}
+
+.tabbar__link--active svg {
+	fill: var(--accent-color);
+}
+
+.tabbar__links svg:hover {
+	fill: var(--accent-color);
+}
+
+@media (width >= 1024px) {
+	.tabbar {
+		display: none;
+	}
+}

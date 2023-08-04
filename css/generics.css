@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	font-size: var(--font-size_text--m);
+	font-style: normal;
+	font-weight: var(--font-weigth_text--m);
+	line-height: var(--line-height_text--m);
+}
+
+li,
+ul,
+ol {
+	margin: 0;
+	list-style-type: none;
+}

@@ -1,0 +1,63 @@
+:root {
+	--main-color: #6725a8;
+	--accent-color: #cb11ab;
+	--attention-color: #f55123;
+	--attention-color--darker: #ff3b30;
+	--attention-second-color: #0cb477;
+	--not-active-color: #ccc;
+	--system-white: #fff;
+	--system-gray: #a0a0a4;
+	--system-black: #000;
+	--text-color__main--light: #000;
+	--text-color__main--dark: #fff;
+	--font-family--main: "Segoe UI";
+
+	/* content-area */
+	--content-area-margin: 1.6rem;
+
+	/* title large size
+	--font-size_title--l: 40px;
+	--line-height_title--l: 120%;
+	--font-weigth_title--l: 700;
+	--letter-spacing_title--l: 4px;
+
+	/* title medium size
+	--font-size_title--m: 24px;
+	--line-height_title--m: 150%;
+	--font-weigth_title--m: 700;
+	--letter-spacing_title--m: 0.48px; */
+
+	/* text medium size */
+	--font-size_text--m: 1.3rem;
+	--line-height_text--m: 1.6rem;
+	--font-weigth_text--m: 400;
+
+	/* text italic medium size
+	--font-size_italic-text--m: 21px;
+	--font-style_italic-text--m: italic;
+	--line-height_italic-text--m: 150%;
+	--font-weigth_italic-text--m: 400;
+	--letter-spacing_italic-text--m: 0.74px; */
+
+	/* text small size
+	--font-size_text--s: 16px;
+	--line-height_text--s: 24px;
+	--font-weigth_text--s: 300;
+	--letter-spacing_text--s: 0.32px; */
+
+	/* header */
+	--height__header: 5.6rem;
+
+	/* footer */
+	--height__footer: 6.4rem;
+
+	/* tabbar */
+	--height__tabbar: 5.6rem;
+}
+
+@media (width >= 1024px) {
+	:root {
+		/* header */
+		--height__header: 8.8rem;
+	}
+}

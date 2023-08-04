@@ -1,0 +1,32 @@
+:root {
+	--main-color: #6725A8;
+	--accent-color: #CB11AB;
+	--attention-color: #F55123;
+	--attention-color--darker: #FF3B30;
+	--attention-second-color: #0CB477;
+	--not-active-color: #CCC;
+	--system-white: #FFF;
+	--system-gray: #A0A0A4;
+	--system-black: #000;
+}
+
+#main,
+#catalog,
+#cart,
+#favorites,
+#profile {
+	fill: var(--not-active-color);
+}
+
+#main:hover,
+#catalog:hover,
+#cart:hover, 
+#favorites:hover,
+#profile:hover {
+	fill: var(--accent-color);
+}
+
+
+#catalog:active {
+	fill: var(--attention-second-color);
+}
