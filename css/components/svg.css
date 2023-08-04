@@ -1,13 +1,13 @@
 :root {
-	--main-color: #6725A8;
-	--accent-color: #CB11AB;
-	--attention-color: #F55123;
-	--attention-color--darker: #FF3B30;
-	--attention-second-color: #0CB477;
-	--not-active-color: #CCC;
-	--system-white: #FFF;
-	--system-gray: #A0A0A4;
-	--system-black: #000;
+	--main-color: #6725a8;
+	--accent-color: #cb11ab;
+	--attention-color: #f55123;
+	--attention-color--darker: #ff3b30;
+	--attention-second-color: #0cb477;
+	--not-active-color: #ccc;
+	--white: #fff;
+	--gray: #a0a0a4;
+	--black: #000;
 }
 
 #main,
@@ -20,12 +20,11 @@
 
 #main:hover,
 #catalog:hover,
-#cart:hover, 
+#cart:hover,
 #favorites:hover,
 #profile:hover {
 	fill: var(--accent-color);
 }
-
 
 #catalog:active {
 	fill: var(--attention-second-color);

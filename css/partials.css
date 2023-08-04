@@ -1,7 +1,10 @@
 /* blocks */
 @import url("./blocks/header.css");
+@import url("./blocks/main.css");
 @import url("./blocks/footer.css");
 @import url("./blocks/tabbar.css");
+@import url("./blocks/basketSidebar.css");
+@import url("./blocks/basketContent.css");
 
 /* components */
 @import url("./components/search.css");

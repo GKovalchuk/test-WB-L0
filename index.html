@@ -29,7 +29,7 @@
 						<label class="search__input_label" htmlFor="searchField">
 							search field
 						</label>
-						<button class="search__button" type="button"></button>
+						<button class="search__button" type="submit"></button>
 					</form>
 				</div>
 				<button class="header__btn header__btn--search" type="button">
@@ -51,7 +51,7 @@
 							class="header__link_image header__link_image--profile"
 							src="./files/img/header/profile.svg"
 							alt="" />
-						<p class="header__link_text">Профиль</p>
+						<p class="header__link_text caption">Профиль</p>
 					</a>
 					<a href="#" class="header__link">
 						<img
@@ -59,13 +59,35 @@
 							src="./files/img/header/cart.svg"
 							alt="" />
 						<div class="notification notification--header-links"><p>3</p></div>
-						<p class="header__link_text">Корзина</p>
+						<p class="header__link_text caption">Корзина</p>
 					</a>
 				</div>
 			</div>
+			<span class="header__bottom-border"></span>
 		</header>
 		<div class="wrapper--scroll-area">
-			<main></main>
+			<main class="wrapper--content-area">
+				<form class="basket-wrapper">
+					<div class="basket-content"></div>
+					<div class="basket-sidebar">
+						<div class="basket-sidebar__price">
+							<h3 class="title--s">Итого</h3>
+							<div
+								id="priceTotal"
+								class="basket-sidebar__price--total ta-right">
+								<h3 class="title--s">2 101 063</h3>
+								<h3>&nbspсом</h3>
+							</div>
+							<p>4 товара</p>
+							<p id="priceFull" class="ta-right">2 302 048 сом</p>
+							<p>Скидка</p>
+							<p id="priceDiscount" class="ta-right">−200 985 сом</p>
+							<p>Доставка</p>
+							<p id="priceDelivery" class="ta-right">Бесплатно</p>
+						</div>
+					</div>
+				</form>
+			</main>
 			<footer>
 				<div class="footer__wrapper">
 					<p id="union" class="footer__text">

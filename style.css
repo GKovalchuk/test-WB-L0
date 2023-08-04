@@ -5,19 +5,14 @@
 @import url("./css/partials.css");
 
 html {
-	font-size: 10px;
+	font-size: 16px;
 }
 
 body {
 	display: block;
-	min-width: 32rem;
+	min-width: 20rem;
 	margin: 0;
 	background-color: var(--main-color);
-	color: var(--text-color__main--light);
-	font-family: var(--font-family--main);
-	font-style: normal;
-	font-weight: var(--font-weigth_text--m);
-	line-height: var(--line-height_text--m);
 }
 
 header {
@@ -27,9 +22,8 @@ header {
 	top: 0;
 	right: 0;
 	left: 0;
-	min-width: 32rem;
+	min-width: 20rem;
 	height: var(--height__header);
-	padding: 0 1.3rem;
 }
 
 .wrapper--scroll-area {
@@ -43,51 +37,16 @@ header {
 	padding-top: var(--height__header);
 }
 
-/* .wrapper--content-area {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: calc(100% - var(--content-area-margin) * 2);
-	min-width: calc(var(--min-screen-width) - var(--content-area-margin) * 2);
-	margin: 0 var(--content-area-margin);
-} */
-
 main {
 	grid-area: main;
-	border-radius: 2.4rem;
-	background-color: var(--system-white);
+	width: 100%;
+	border-radius: 0 0 1.5rem 1.5rem;
+	background-color: var(--background-color);
 }
 
 footer {
 	display: flex;
 	grid-area: footer;
-	height: 6.4rem;
-	padding: 2.4rem;
-}
-
-@media (width >= 1024px) {
-	header {
-		padding: 1.6rem 2rem 1.6rem 2.4rem;
-	}
-
-	.wrapper--content-area {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		width: calc(100% - 8rem);
-		margin: 0 4rem;
-		padding: 0;
-		gap: 2rem;
-	}
-
-	.wrapper--scroll-area {
-		height: 100vh;
-	}
-}
-
-@media (width >= 1180px) {
-	.wrapper--content-area {
-		grid-template-columns: repeat(4, 26rem);
-		width: 110rem;
-		margin: 0 auto;
-	}
+	height: 4rem;
+	padding: 1.5rem;
 }
