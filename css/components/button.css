@@ -1,0 +1,17 @@
+.btn-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: stretch;
+	justify-content: center;
+	height: 2.75rem;
+	padding: 0 2rem 0.3125rem;
+	border-radius: 0.5rem;
+	background: var(--accent-color);
+	color: var(--white);
+}
+
+.btn-main h4 {
+	position: relative;
+	bottom: var(--text-height-adjustment);
+}

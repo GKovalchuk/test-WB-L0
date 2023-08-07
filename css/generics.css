@@ -18,9 +18,19 @@ h3 {
 	line-height: var(--line-height_title--s);
 }
 
-p {
+h4 {
+	font-size: var(--font-size_text--m);
+	font-style: normal;
+	font-weight: var(--font-weigth_title--s);
+	line-height: var(--line-height_text--m);
+}
+
+a,
+p,
+mark {
 	margin: 0;
 	padding: 0;
+	background: none;
 	font-size: var(--font-size_text--m);
 	font-style: normal;
 	font-weight: var(--font-weigth_text--m);
@@ -32,33 +42,4 @@ ul,
 ol {
 	margin: 0;
 	list-style-type: none;
-}
-
-.ta-right {
-	text-align: right;
-}
-
-.caption {
-	font-size: var(--font-size_text--s);
-	font-style: normal;
-	font-weight: var(--font-weigth_text--s);
-	line-height: var(--line-height_text--s);
-}
-
-.title--s {
-	font-size: var(--font-size_title--s);
-	font-style: normal;
-	font-weight: var(--font-weigth_title--s);
-	letter-spacing: var(--letter-spacing_title--s);
-	line-height: var(--line-height_title--s);
-}
-
-@media (width >= 64rem) {
-	.title--s {
-		font-size: var(--font-size_title--m);
-		font-style: normal;
-		font-weight: var(--font-weigth_title--m);
-		letter-spacing: var(--letter-spacing_title--m);
-		line-height: var(--line-height_title--m);
-	}
 }

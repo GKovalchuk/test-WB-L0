@@ -16,7 +16,7 @@
 	height: var(--height__header--bottom-border);
 	border-radius: var(--height__header--bottom-border)
 		var(--height__header--bottom-border) 0 0;
-	background: var(--white);
+	background: var(--background-color);
 }
 
 .header__leftside-wrapper {
@@ -108,12 +108,14 @@
 	}
 
 	.header__logo {
+		position: relative;
+		bottom: var(--text-height-adjustment);
 		width: 6.625rem;
 		height: 100%;
 		margin-top: 0;
 		padding: 1px 0 7px;
 		font-size: 1.75rem;
-		letter-spacing: 0.035rem;
+		letter-spacing: 0.05rem;
 		line-height: 1.5rem;
 		text-align: left;
 	}

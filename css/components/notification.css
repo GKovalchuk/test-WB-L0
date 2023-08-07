@@ -1,8 +1,8 @@
 .notification {
 	display: inline-flex;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: -0.2rem;
+	right: -0.4rem;
 	flex-direction: column;
 	align-items: center;
 	justify-content: end;
@@ -32,6 +32,6 @@
 }
 
 .notification--tabbar {
-	top: -1.5rem;
-	right: -0.25rem;
+	top: -0.2rem;
+	right: -0.4rem;
 }

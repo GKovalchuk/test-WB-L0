@@ -1,7 +1,10 @@
 .tabbar {
 	display: flex;
 	position: fixed;
+	z-index: 10;
+	right: 0;
 	bottom: 0;
+	left: 0;
 	flex-wrap: wrap;
 	align-content: center;
 	width: 100%;
@@ -23,6 +26,7 @@
 }
 
 .tabbar__link {
+	display: block;
 	position: relative;
 }
 

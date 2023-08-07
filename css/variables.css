@@ -2,12 +2,15 @@
 	--main-color: #6725a8;
 	--background-color: #f6f6fa;
 	--accent-color: #cb11ab;
+	--accent-color--transparent: #cb11ab20;
 	--attention-color: #f55123;
-	--attention-color--darker: #ff3b30;
+	--attention-color--dark: #ff3b30;
 	--attention-second-color: #0cb477;
 	--not-active-color: #ccc;
 	--white: #fff;
 	--gray: #a0a0a4;
+	--smoky: #f6f6fa;
+	--smoky--dark: #f0ecf4;
 	--black: #000;
 	--text-color__main--light: #000;
 	--text-color__main--dark: #fff;
@@ -16,12 +19,6 @@
 
 	/* content-area */
 	--content-area-margin: 1rem;
-
-	/* title large size
-	--font-size_title--l: 40px;
-	--line-height_title--l: 120%;
-	--font-weigth_title--l: 700;
-	--letter-spacing_title--l: 4px;
 
 	/* title medium size */
 	--font-size_title--m: 1.5rem;
@@ -45,19 +42,6 @@
 	--line-height_text--s: 1rem;
 	--font-weigth_text--s: 400;
 
-	/* text italic medium size
-	--font-size_italic-text--m: 21px;
-	--font-style_italic-text--m: italic;
-	--line-height_italic-text--m: 150%;
-	--font-weigth_italic-text--m: 400;
-	--letter-spacing_italic-text--m: 0.74px; */
-
-	/* text small size
-	--font-size_text--s: 16px;
-	--line-height_text--s: 24px;
-	--font-weigth_text--s: 300;
-	--letter-spacing_text--s: 0.32px; */
-
 	/* header */
 	--height__header: 5rem;
 
@@ -66,11 +50,19 @@
 
 	/* tabbar */
 	--height__tabbar: 3.5rem;
+
+	/* текст плавает на 1 пиксель в некоторых блоках
+	не знаю, насколько это критично. ввел поправку
+	при ее изменении высота блоков не меняется */
+	--text-height-adjustment: -1px;
 }
 
 @media (width >= 64rem) {
 	:root {
 		/* header */
 		--height__header: 7rem;
+
+		/* tabbar */
+		--height__tabbar: 0;
 	}
 }
