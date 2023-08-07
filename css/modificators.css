@@ -1,0 +1,70 @@
+.ta-right {
+	text-align: right;
+}
+
+.caption {
+	font-size: var(--font-size_text--s);
+	font-style: normal;
+	font-weight: var(--font-weigth_text--s);
+	line-height: var(--line-height_text--s);
+}
+
+.title--s {
+	font-size: var(--font-size_title--s);
+	font-style: normal;
+	font-weight: var(--font-weigth_title--s);
+	letter-spacing: var(--letter-spacing_title--s);
+	line-height: var(--line-height_title--s);
+}
+
+.text--ac-color {
+	color: var(--accent-color);
+}
+
+.text--second-at-color {
+	color: var(--attention-second-color);
+}
+
+.info_link,
+.info_link:hover,
+.info_link:focus,
+.info_link:active {
+	transition: text-decoration 0.1s linear;
+	text-decoration: underline rgba(0 0 0 / 10%);
+	cursor: pointer;
+}
+
+.info_link:hover,
+.info_link:focus,
+.info_link:active {
+	text-decoration-color: var(--black);
+}
+
+.info_spoiler,
+.info_spoiler--ac-color {
+	transition: text-decoration 0.1s linear;
+	text-decoration: underline dashed;
+}
+
+.info_spoiler--ac-color {
+	margin-bottom: 2px;
+	text-decoration-color: var(--accent-color--transparent);
+}
+
+.info_spoiler--ac-color:hover,
+.info_spoiler--ac-color:focus,
+.info_spoiler--ac-color:active {
+	transition: text-decoration 0.1s linear;
+	text-decoration: underline dashed;
+	text-decoration-color: var(--accent-color);
+}
+
+@media (width >= 64rem) {
+	.title--s {
+		font-size: var(--font-size_title--m);
+		font-style: normal;
+		font-weight: var(--font-weigth_title--m);
+		letter-spacing: var(--letter-spacing_title--m);
+		line-height: var(--line-height_title--m);
+	}
+}

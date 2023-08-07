@@ -29,7 +29,7 @@
 						<label class="search__input_label" htmlFor="searchField">
 							search field
 						</label>
-						<button class="search__button" type="button"></button>
+						<button class="search__button" type="submit"></button>
 					</form>
 				</div>
 				<button class="header__btn header__btn--search" type="button">
@@ -51,7 +51,7 @@
 							class="header__link_image header__link_image--profile"
 							src="./files/img/header/profile.svg"
 							alt="" />
-						<p class="header__link_text">Профиль</p>
+						<p class="header__link_text caption">Профиль</p>
 					</a>
 					<a href="#" class="header__link">
 						<img
@@ -59,21 +59,167 @@
 							src="./files/img/header/cart.svg"
 							alt="" />
 						<div class="notification notification--header-links"><p>3</p></div>
-						<p class="header__link_text">Корзина</p>
+						<p class="header__link_text caption">Корзина</p>
 					</a>
 				</div>
 			</div>
+			<!-- конец header__wrapper -->
+			<span class="header__bottom-border"></span>
 		</header>
+		<!-- конец header -->
 		<div class="wrapper--scroll-area">
-			<main></main>
+			<main>
+				<form class="basket">
+					<div class="basket__content">
+						<div class="basket__content_title">Корзина</div>
+						<div class="basket__content_content-layout">
+							<div class="basket__content_supplies">
+								<div class="supplies-card supplies-card--in-stock">
+									<div class="supplies-card__controls">
+										<input
+											id="takeAllSupplies"
+											name="takeAllSupplies"
+											type="checkbox"
+											class="checkbox" />
+										<label
+											class="darker-field_checkbox checkbox_label"
+											for="takeAllSupplies">
+											<p class="caption">Выбрать все</p>
+										</label>
+										<button class="btn-collapse btn-expand">
+											<img src="./files/img/conrol_arrow.svg" alt="" />
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="basket__content_supplies">
+								<div class="supplies-card supplies-card--out-of-stock">
+									<div class="supplies-card__controls--not-active">
+										<p class="semibold">Отсутствуют · <p id="outOfStockCounters" class="semibold">3</p> товара</p>
+										<button class="btn-collapse btn-expand">
+											<img src="./files/img/conrol_arrow.svg" alt="" />
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="basket__content_order-details"></div>
+						</div>
+					</div>
+					<!-- конец basket-content -->
+					<div class="basket__sidebar">
+						<div class="payment-details">
+							<div class="payment-details_price">
+								<h3 class="title--s">Итого</h3>
+								<div
+									id="priceTotal"
+									class="payment-details_price--total ta-right">
+									<h3 class="title--s">2 101 063</h3>
+									<h3>&nbspсом</h3>
+								</div>
+								<p>4 товара</p>
+								<p id="priceFull" class="ta-right">2 302 048 сом</p>
+								<p>Скидка</p>
+								<p id="priceDiscount" class="ta-right">−200 985 сом</p>
+								<p>Доставка</p>
+								<p id="priceDelivery" class="ta-right">Бесплатно</p>
+							</div>
+							<div class="payment-details_item">
+								<div class="payment-details_item-details">
+									<div class="sidebar-card_title">
+										<h4 class="sidebar-card_title--text">
+											Доставка в пункт выдачи
+										</h4>
+										<img
+											class="sidebar-card_title--icon"
+											src="./files/img/pencil.svg"
+											alt="edit" />
+									</div>
+									<p class="caption">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+									<mark
+										id="shippingDate"
+										class="caption info_spoiler--ac-color text--ac-color">
+										5&#8211;8 фев
+									</mark>
+								</div>
+								<div class="darker-field">
+									<div class="payment-details_shipping--price">
+										<img src="./files/img/price_shipping.svg" alt="" />
+										<p class="caption">
+											Обратная доставка товаров на склад при отказе —
+											<mark
+												id="shippingCost"
+												class="caption info_spoiler text--second-at-color">
+												бесплатно
+											</mark>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="payment-details_item">
+								<div class="payment-details_item-details">
+									<div class="sidebar-card_title">
+										<h4 class="sidebar-card_title--text">Оплата картой</h4>
+										<img
+											class="sidebar-card_title--icon"
+											src="./files/img/pencil.svg"
+											alt="edit" />
+									</div>
+									<div class="sidebar-card_description">
+										<img
+											class="sidebar-card_description--icon"
+											src="./files/img/mir.svg"
+											alt="edit" />
+										<p class="caption">1234 12•• •••• 1234</p>
+									</div>
+								</div>
+								<div class="darker-field">
+									<input
+										id="paymentImmediately"
+										name="paymentImmediately"
+										type="checkbox"
+										class="checkbox" />
+									<label
+										class="darker-field_checkbox checkbox_label"
+										for="paymentImmediately">
+										<p class="caption">Списать оплату сразу</p>
+									</label>
+									<p class="caption">Спишем оплату с карты при получении</p>
+								</div>
+							</div>
+						</div>
+						<!-- конец payment-details -->
+						<div class="basket__submit">
+							<button class="btn-main" type="submit">
+								<h4>Заказать</h4>
+							</button>
+							<div class="basket__submit_agreement">
+								<img src="./files/img/check.svg" alt="" />
+								<p class="caption">
+									Соглашаюсь
+									<a class="caption info_link" href="#"
+										>с правилами пользования&nbsp;торговой площадкой</a
+									>
+									и&nbsp;<a class="caption info_link" href="#">возврата</a>
+								</p>
+							</div>
+						</div>
+						<!-- конец basket__submit -->
+					</div>
+					<!-- конец basket-sidebar -->
+				</form>
+				<!-- конец basket-wrapper -->
+			</main>
+			<!-- конец main -->
 			<footer>
 				<div class="footer__wrapper">
-					<p id="union" class="footer__text">
-						© 2022&nbsp&nbspООО «Товары и точка»
+					<p class="footer__text caption">
+						© 2022&nbsp&nbspООО&nbsp«Товары и точка»
 					</p>
 				</div>
 			</footer>
+			<!-- конец footer -->
 		</div>
+		<!-- конец wrapper--scroll-area -->
 		<nav class="tabbar">
 			<ul class="tabbar__links">
 				<li>
@@ -189,6 +335,7 @@
 				</li>
 			</ul>
 		</nav>
+		<!-- конец tabbar -->
 		<script src="./js/app.js"></script>
 	</body>
 </html>

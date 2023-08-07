@@ -1,0 +1,130 @@
+.basket {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	min-width: 20rem;
+	padding: 0;
+	gap: 1rem;
+}
+
+.basket__content,
+.basket__sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	height: max-content;
+	padding: 0 1rem;
+}
+
+.basket__content {
+	height: 2298px;
+	background: transparent;
+	background: var(--white);
+}
+
+.basket__content_content-layout {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-width: 40rem;
+	gap: 2.5rem;
+}
+
+.basket__sidebar {
+	padding-top: 0.5rem;
+	padding-bottom: 1rem;
+	gap: 1.5rem;
+	border-radius: 1rem 1rem 0 0;
+	background: var(--background-color);
+}
+
+.basket__submit {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.75rem;
+	align-self: stretch;
+}
+
+.basket__submit_agreement {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.5rem;
+	align-self: stretch;
+}
+
+.basket__submit_agreement img {
+	min-width: 0.8125rem;
+	height: 1.5rem;
+}
+
+@media (width >= 64rem) {
+	.basket {
+		flex-direction: row;
+		align-items: flex-start;
+		width: 100%;
+		padding: 0 1.5rem 1rem;
+		gap: 2rem;
+	}
+
+	.basket__content {
+		display: flex;
+		flex: 1 0 0;
+		flex-direction: column;
+		align-items: flex-start;
+		min-width: 40rem;
+		height: 1809px;
+		gap: 1.6875rem;
+	}
+
+	.basket__content_content-layout {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		min-width: 40rem;
+		gap: 2.5rem;
+	}
+
+	.basket__content_supplies {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		gap: 1rem;
+	}
+
+	.basket__content_order-details {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		gap: 1rem;
+	}
+
+	.basket__sidebar {
+		display: flex;
+		position: sticky;
+		z-index: 11;
+		top: calc(var(--height__header) - 0.125rem);
+		flex-direction: column;
+		align-items: center;
+		width: 19rem;
+		margin-top: -0.125rem;
+		gap: 1.5rem;
+
+		/* на макете блок на 1 px сдвинут. поэтому сделал calc в padding-left ниже */
+		padding: 1rem calc(1.5rem + 1px) 1.5rem 1.5rem;
+		border-radius: 1rem;
+		background: var(--white);
+		box-shadow: var(--main-shadows);
+	}
+}
+
+@media (width >= 87.5rem) {
+	.basket__sidebar {
+		width: 26.8125rem;
+		padding: 1rem 1.5rem 1.5rem;
+	}
+}

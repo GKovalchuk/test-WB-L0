@@ -1,8 +1,15 @@
 /* blocks */
 @import url("./blocks/header.css");
+@import url("./blocks/main.css");
 @import url("./blocks/footer.css");
 @import url("./blocks/tabbar.css");
+@import url("./blocks/basket.css");
+@import url("./blocks/paymentDetails.css");
 
 /* components */
 @import url("./components/search.css");
+@import url("./components/checkbox.css");
+@import url("./components/button.css");
 @import url("./components/notification.css");
+@import url("./components/darkerField.css");
+@import url("./components/sidebarCard.css");

@@ -1,21 +1,24 @@
 .tabbar {
 	display: flex;
 	position: fixed;
+	z-index: 10;
+	right: 0;
 	bottom: 0;
+	left: 0;
 	flex-wrap: wrap;
 	align-content: center;
 	width: 100%;
-	min-width: 32rem;
+	min-width: 2rem;
 	height: var(--height__tabbar);
-	padding-top: 0.3rem;
-	background: var(--system-white);
+	padding-top: 3px;
+	background: var(--white);
 }
 
 .tabbar__links {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	padding: 0 1.3rem;
+	padding: 0 13px;
 }
 
 .tabbar__links svg {
@@ -23,6 +26,7 @@
 }
 
 .tabbar__link {
+	display: block;
 	position: relative;
 }
 
@@ -34,7 +38,7 @@
 	fill: var(--accent-color);
 }
 
-@media (width >= 1024px) {
+@media (width >= 64rem) {
 	.tabbar {
 		display: none;
 	}
