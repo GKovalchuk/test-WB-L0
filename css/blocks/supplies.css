@@ -1,0 +1,42 @@
+.supplies {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-self: stretch;
+	gap: 1rem;
+}
+
+.supplies__controls {
+	display: flex;
+	position: relative;
+	align-items: center;
+	gap: 0.6875rem;
+	align-self: stretch;
+}
+
+.supplies__controls::after {
+	content: " ";
+	position: absolute;
+	bottom: -1rem;
+	width: 100%;
+	height: 0.0625rem;
+	background-color: rgba(0 0 0 / 10%);
+}
+
+.supplies__controls_checkbox,
+.supplies__controls p {
+	display: flex;
+	flex: 1 0 0;
+	align-items: center;
+	height: 1.5rem;
+	padding-bottom: 0;
+	gap: 0.5rem;
+}
+
+.supplies__cards {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.25rem;
+	align-self: stretch;
+}

@@ -5,6 +5,7 @@
 @import url("./blocks/tabbar.css");
 @import url("./blocks/basket.css");
 @import url("./blocks/paymentDetails.css");
+@import url("./blocks/supplies.css");
 
 /* components */
 @import url("./components/search.css");
@@ -12,4 +13,6 @@
 @import url("./components/button.css");
 @import url("./components/notification.css");
 @import url("./components/darkerField.css");
+@import url("./components/basketCard.css");
 @import url("./components/sidebarCard.css");
+@import url("./components/counter.css");

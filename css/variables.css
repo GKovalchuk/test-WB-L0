@@ -20,6 +20,12 @@
 	/* content-area */
 	--content-area-margin: 1rem;
 
+	/* title large size */
+	--font-size_title--l: 1.75rem;
+	--line-height_title--l: 2.25rem;
+	--font-weigth_title--l: 700;
+	--letter-spacing_title--l: -0.0175rem;
+
 	/* title medium size */
 	--font-size_title--m: 1.5rem;
 	--line-height_title--m: 2rem;
