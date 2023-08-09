@@ -161,3 +161,10 @@
 		color: var(--white);
 	}
 }
+
+@media (width >= 87.5rem) {
+	.header__wrapper {
+		width: 87.5rem;
+		margin: 0 auto;
+	}
+}
