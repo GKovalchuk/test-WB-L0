@@ -10,6 +10,15 @@ body {
 	line-height: var(--line-height_text--m);
 }
 
+h1 {
+	color: var(--black);
+	font-size: var(--font-size_title--l);
+	font-style: normal;
+	font-weight: var(--font-weigth_title--l);
+	letter-spacing: var(--letter-spacing_title--l);
+	line-height: var(--line-height_title--l);
+}
+
 h3 {
 	font-size: var(--font-size_title--s);
 	font-style: normal;
@@ -27,10 +36,14 @@ h4 {
 
 a,
 p,
-mark {
+mark,
+code,
+kbd,
+samp {
 	margin: 0;
 	padding: 0;
 	background: none;
+	font-family: var(--font-family--main);
 	font-size: var(--font-size_text--m);
 	font-style: normal;
 	font-weight: var(--font-weigth_text--m);

@@ -15,3 +15,31 @@
 	position: relative;
 	bottom: var(--text-height-adjustment);
 }
+
+.btn-collapse {
+	background: none;
+}
+
+.btn-expand {
+	transform: rotate(0deg);
+}
+
+.btn-expand--active {
+	transform: rotate(180deg);
+}
+
+.btn-info {
+	width: 1.25rem;
+	height: 1.25rem;
+	background: none;
+}
+
+.btn-info:hover svg circle,
+.btn-info:focus svg circle {
+	stroke: #000;
+}
+
+.btn-info:hover svg path,
+.btn-info:focus svg path {
+	fill: #000;
+}

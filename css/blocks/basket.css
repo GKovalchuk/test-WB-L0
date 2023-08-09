@@ -6,6 +6,7 @@
 	min-width: 20rem;
 	padding: 0;
 	gap: 1rem;
+	background: transparent;
 }
 
 .basket__content,
@@ -20,16 +21,6 @@
 
 .basket__content {
 	height: 2298px;
-	background: transparent;
-	background: var(--white);
-}
-
-.basket__content_content-layout {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	min-width: 40rem;
-	gap: 2.5rem;
 }
 
 .basket__sidebar {
@@ -38,6 +29,13 @@
 	gap: 1.5rem;
 	border-radius: 1rem 1rem 0 0;
 	background: var(--background-color);
+}
+
+.basket__content_layout {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2.5rem;
 }
 
 .basket__submit {
@@ -74,12 +72,12 @@
 		flex: 1 0 0;
 		flex-direction: column;
 		align-items: flex-start;
-		min-width: 40rem;
-		height: 1809px;
+		height: 113rem;
 		gap: 1.6875rem;
+		padding: 0;
 	}
 
-	.basket__content_content-layout {
+	.basket__content_layout {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
