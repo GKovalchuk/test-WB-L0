@@ -23,14 +23,16 @@
 	background-color: rgba(0 0 0 / 10%);
 }
 
-.supplies__controls_checkbox,
-.supplies__controls p {
+.supplies__controls_checkbox {
 	display: flex;
 	flex: 1 0 0;
 	align-items: center;
 	height: 1.5rem;
-	padding-bottom: 0;
-	gap: 0.5rem;
+	gap: 0.6875rem;
+}
+
+.supplies__controls p {
+	padding-bottom: 0.3125rem;
 }
 
 .supplies__cards {

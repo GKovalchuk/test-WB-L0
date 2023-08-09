@@ -56,3 +56,12 @@ footer {
 	height: var(--height__footer);
 	padding: 1.5rem;
 }
+
+@media (width >= 87.5rem) {
+	header,
+	.wrapper--scroll-area,
+	main,
+	footer {
+		width: 100%;
+	}
+}
