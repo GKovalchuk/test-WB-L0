@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/head.html',{ "title":"Главная" })
+
+	<body>
+		<header>@@include('html/header.html')</header>
+		<div class="wrapper--scroll-area">
+			<main>
+				<form class="basket">
+					<!-- начало basket__content -->
+					<div class="basket__content">
+						<h1>Корзина</h1>
+						<div class="basket__content_layout">
+							@@include('html/blocks/basketCards.html')
+							<!-- начало деталей заказа -->
+							<div class="basket__content_order-details">
+								<!-- начало доставка -->
+								@@include('html/blocks/delivery.html')
+								<!-- конец доставка -->
+								<!-- начало оплата -->
+								<div class="basket__payment"></div>
+								<!-- конец оплата -->
+								<!-- начало получатель -->
+								<div class="basket__recipient"></div>
+								<!-- конец получатель -->
+							</div>
+
+							<!-- конец деталей заказа -->
+						</div>
+					</div>
+					@@include('html/components/iconsForJs.html')
+					<!-- конец basket__content -->
+					<!-- начало basket__sidebar -->
+					<div class="basket__sidebar">
+						@@include('html/blocks/paymentDetails.html')
+						@@include('html/components/submit.html')
+					</div>
+					<!-- конец basket-sidebar -->
+				</form>
+				<!-- конец basket-wrapper -->
+			</main>
+			<!-- конец main -->
+			<footer>@@include('html/footer.html')</footer>
+		</div>
+		<!-- конец wrapper--scroll-area -->
+		@@include('html/tabbar.html')
+		<script type="module" src="js/app.min.js"></script>
+	</body>
+</html>
