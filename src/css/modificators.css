@@ -72,6 +72,7 @@
 	transition: text-decoration 0.1s linear;
 	text-decoration: underline rgba(0 0 0 / 10%);
 	cursor: pointer;
+	letter-spacing: 0.0025rem;
 }
 
 .info_link:hover,

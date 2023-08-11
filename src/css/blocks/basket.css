@@ -71,7 +71,7 @@
 	.basket__content {
 		flex: 1 0 0;
 		width: calc(100% - var(--width__sidebar) - 3rem);
-		height: 113rem;
+		height: 113.75rem;
 		gap: 1.6875rem;
 		padding: 0;
 	}
