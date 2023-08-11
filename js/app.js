@@ -1,9 +1,11 @@
-import { basketCardRender } from "./basketCardsRender.js";
+import { renderBasketCards } from "./createCard/renderBasketCards.js";
 import { data } from "./data.js";
 
+export const localData = [...data];
+export const render = () => {
+	localData.map((cardData) => renderBasketCards(cardData));
+};
 
-data.map((cardData) => basketCardRender(cardData));
-
-
+render();
 
 // чекбокс - нажатие по enter

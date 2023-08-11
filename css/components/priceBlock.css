@@ -1,0 +1,61 @@
+.price_wrapper--desc,
+.price_wrapper--options {
+	display: flex;
+	flex: 1 0 0;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 0.3125rem;
+	align-self: stretch;
+}
+
+.price_wrapper--desc {
+	flex-direction: row;
+	align-items: baseline;
+	margin-bottom: -0.3725rem;
+}
+
+.price_wrapper--options {
+	display: none;
+}
+
+.price {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+	justify-content: center;
+	gap: 0.125rem;
+}
+
+.price h4 {
+	max-height: 1.75rem;
+	margin-top: auto;
+	margin-bottom: auto;
+	letter-spacing: -0.0125rem;
+}
+
+.price h4:last-child {
+	height: auto;
+}
+
+.price--full {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.0625rem;
+	color: var(--gray);
+}
+
+@media (width >= 64rem) {
+	.price_wrapper--desc {
+		display: none;
+	}
+
+	.price_wrapper--options {
+		display: flex;
+	}
+
+	.price {
+		height: 1.75rem;
+	}
+}
