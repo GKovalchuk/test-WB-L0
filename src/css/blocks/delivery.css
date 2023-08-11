@@ -1,0 +1,53 @@
+.delivery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: stretch;
+	padding: 1rem 0 1.5rem;
+	gap: 1.5rem;
+}
+
+.delivery__title_wrapper {
+	display: flex;
+	align-items: flex-start;
+	align-self: stretch;
+	padding: 0 1rem;
+	gap: 0.625rem;
+}
+
+.delivery__details {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-self: stretch;
+	padding: 0 1rem;
+	gap: 1rem;
+}
+
+.delivery__refund {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-self: stretch;
+	padding: 0 1.5rem;
+	gap: 0.5rem;
+}
+
+@media (width >= 64rem) {
+	.delivery {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-self: stretch;
+		padding: 1rem 0 1.5rem;
+		gap: 1.5rem;
+	}
+
+	.delivery__title_wrapper {
+		padding: 0 1.5rem;
+	}
+
+	.delivery__details {
+		gap: 2rem;
+	}
+}
