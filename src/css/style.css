@@ -15,7 +15,8 @@ body {
 	margin: 0;
 	background: linear-gradient(
 		to bottom,
-		var(--background-color) 0% 50%,
+		var(--main-color) 0% var(--height__header),
+		var(--background-color) var(--height__header) 50%,
 		var(--main-color) 50% 100%
 	);
 }
@@ -29,7 +30,7 @@ header {
 	left: 0;
 	min-width: 20rem;
 	height: var(--height__header);
-	background-color: var(--main-color);
+	background: var(--main-color);
 }
 
 .wrapper--scroll-area {

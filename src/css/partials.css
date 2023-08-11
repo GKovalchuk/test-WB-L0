@@ -8,6 +8,7 @@
 @import url("./blocks/supplies.css");
 
 /* components */
+@import url("./components/refund.css");
 @import url("./components/search.css");
 @import url("./components/submit.css");
 @import url("./components/checkbox.css");
