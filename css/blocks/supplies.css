@@ -17,13 +17,14 @@
 .supplies__controls::after {
 	content: " ";
 	position: absolute;
-	bottom: -1rem;
+	bottom: calc(-1rem);
 	width: 100%;
 	height: 0.0625rem;
 	background-color: rgba(0 0 0 / 10%);
 }
 
-.supplies__controls_checkbox {
+.supplies__controls_checkbox,
+.supplies__controls_p {
 	display: flex;
 	flex: 1 0 0;
 	align-items: center;
@@ -35,10 +36,27 @@
 	padding-bottom: 0.3125rem;
 }
 
-.supplies__cards {
+.supplies__cards,
+.supplies__cards--out-of-stock {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 1.25rem;
+	gap: 1rem;
 	align-self: stretch;
+}
+
+.supplies--out-of-stock img {
+	filter: grayscale(1);
+}
+
+.supplies__cards--out-of-stock .basket-card_options-amount,
+.supplies__cards--out-of-stock .basket-card_options {
+	height: 1.5rem;
+}
+
+@media (width >= 64rem) {
+	.supplies__cards,
+	.supplies__cards--out-of-stock {
+		gap: 1.25rem;
+	}
 }

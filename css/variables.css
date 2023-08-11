@@ -16,6 +16,8 @@
 	--text-color__main--dark: #fff;
 	--font-family--main: "Segoe UI";
 	--main-shadows: 0 0 1px rgba(0 0 0 / 30%), 0 2px 10px 0 rgba(0 0 0 / 15%);
+	--dropdown-shadows: 0px 0px 1px 0px rgba(0 0 0 / 15%),
+		0px 2px 10px 0px rgba(0 0 0 / 15%);
 
 	/* content-area */
 	--content-area-margin: 1rem;

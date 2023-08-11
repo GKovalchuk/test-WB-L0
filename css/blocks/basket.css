@@ -40,7 +40,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 2.5rem;
+	gap: 3.0625rem;
 }
 
 .basket__submit {
@@ -88,20 +88,9 @@
 	}
 
 	.basket__content_layout {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
 		width: 100%;
 		min-width: 40rem;
 		gap: 2.5rem;
-	}
-
-	.basket__content_supplies {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		width: 100%;
-		gap: 1rem;
 	}
 
 	.basket__content_order-details {

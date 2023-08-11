@@ -13,7 +13,16 @@
 	font-size: var(--font-size_text--m);
 	font-style: normal;
 	font-weight: 600;
+	letter-spacing: -0.021rem;
 	line-height: var(--line-height_text--m);
+}
+
+.body-mobile {
+	color: var(--text-color__main--light);
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.25rem;
 }
 
 .lead {
@@ -62,26 +71,6 @@
 	text-decoration-color: var(--black);
 }
 
-.info_spoiler,
-.info_spoiler--ac-color {
-	transition: text-decoration 0.1s linear;
-	text-decoration: underline dashed;
-	cursor: pointer;
-}
-
-.info_spoiler--ac-color {
-	margin-bottom: 2px;
-	text-decoration-color: var(--accent-color--transparent);
-}
-
-.info_spoiler--ac-color:hover,
-.info_spoiler--ac-color:focus,
-.info_spoiler--ac-color:active {
-	transition: text-decoration 0.1s linear;
-	text-decoration: underline dashed;
-	text-decoration-color: var(--accent-color);
-}
-
 .not-actual::before {
 	content: " ";
 	position: absolute;
@@ -106,5 +95,13 @@
 		font-weight: var(--font-weigth_title--s);
 		letter-spacing: var(--letter-spacing_title--s);
 		line-height: var(--line-height_title--s);
+	}
+
+	.body-mobile {
+		color: var(--text-color__main--light);
+		font-size: inherit;
+		font-style: normal;
+		font-weight: 400;
+		line-height: inherit;
 	}
 }
