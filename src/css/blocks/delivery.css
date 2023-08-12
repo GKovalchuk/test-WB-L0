@@ -1,53 +1,87 @@
 .delivery {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	align-self: stretch;
-	padding: 1rem 0 1.5rem;
-	gap: 1.5rem;
-}
-
-.delivery__title_wrapper {
-	display: flex;
 	align-items: flex-start;
 	align-self: stretch;
-	padding: 0 1rem;
-	gap: 0.625rem;
-}
-
-.delivery__details {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	align-self: stretch;
-	padding: 0 1rem;
 	gap: 1rem;
 }
 
-.delivery__refund {
+.delivery_cost {
+	margin-top: 1rem;
+	margin-top: 1.0625rem;
+}
+.delivery_dates {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	align-self: stretch;
-	padding: 0 1.5rem;
+	gap: 1.5rem;
+}
+
+.delivery_schedule {
+	margin-top: 0.25rem;
+}
+
+.delivery_date-list {
+	margin-top: 0.75rem;
+	display: flex;
+	height: 3.5rem;
+	align-items: flex-start;
 	gap: 0.5rem;
+}
+
+.delivery_item-wrapper {
+	position: relative;
+	width: 41px;
+	height: 100%;
+}
+.delivery_item-wrapper img {
+	width: 100%;
+}
+
+.delivery_refund {
+	margin-top: 1.5rem;
+	padding: 0 0.5rem;
 }
 
 @media (width >= 64rem) {
 	.delivery {
+		gap: 1rem;
+	}
+
+	.delivery_address-wrapper,
+	.delivery_dates {
+		width: 100%;
+	}
+
+	.delivery_dates {
+		gap: 1rem;
+	}
+
+	.delivery_address,
+	.delivery_date,
+	.delivery_cost {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		align-self: stretch;
-		padding: 1rem 0 1.5rem;
-		gap: 1.5rem;
-	}
-
-	.delivery__title_wrapper {
-		padding: 0 1.5rem;
-	}
-
-	.delivery__details {
+		flex-flow: row nowrap;
 		gap: 2rem;
+		width: 100%;
+	}
+
+	.delivery_address .semibold,
+	.delivery_date .semibold {
+		width: 9.56rem;
+	}
+
+	.delivery_date-list {
+		margin-top: 0;
+	}
+
+	.delivery_schedule {
+		margin-left: 11.56rem;
+	}
+
+	.delivery_refund {
+		align-self: start;
+		padding: 0;
 	}
 }

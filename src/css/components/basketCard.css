@@ -21,6 +21,14 @@
 	gap: 1rem;
 }
 
+.basket-card_description .card_date {
+	display: none;
+}
+
+.basket-card_description .card p {
+	flex: 1 0 0;
+}
+
 .basket-card_options {
 	display: flex;
 	align-items: center;

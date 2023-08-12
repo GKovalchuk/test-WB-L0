@@ -1,18 +1,65 @@
-<div class="delivery">
-	<div class="delivery__title_wrapper">
-		<div class="delivery__details">
-			<div class="delivery__refund">
-				<div class="refund">
-					<p class="caption">
-						Обратная доставка товаров на склад при отказе —
-						<mark
-							id="refundCost"
-							class="caption info_spoiler text--second-at-color">
-							бесплатно
-						</mark>
-					</p>
+<div class="white-section">
+	<div class="white-section_title">
+		<h3 class="title--m">Способ доставки</h3>
+		<button class="btn-text" type="button">
+			<h4>Изменить</h4>
+		</button>
+	</div>
+	<div class="delivery">
+		<div class="delivery_address-wrapper">
+			<div class="delivery_address">
+				<p class="semibold">Пункт выдачи</p>
+				<p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+			</div>
+			<div class="delivery_schedule">
+				@@include('../components/cardRating.html')
+			</div>
+			<div class="delivery_cost">
+				<p class="semibold">Стоимость доставки</p>
+				<p>Бесплатно</p>
+			</div>
+		</div>
+		<div class="delivery_dates">
+			<div class="delivery_date">
+				<p class="semibold">5—6 февраля</p>
+				<div class="delivery_date-list">
+					<div class="delivery_item-wrapper">
+						<img src="/files/img/supplies/1-x2.png" alt="" />
+					</div>
+					<div class="delivery_item-wrapper">
+						<div class="notification">
+							<p>184</p>
+						</div>
+						<img src="/files/img/supplies/2-x2.png" alt="" />
+					</div>
+					<div class="delivery_item-wrapper">
+						<div class="notification"><p>2</p></div>
+						<img src="/files/img/supplies/3-x2.png" alt="" />
+					</div>
 				</div>
 			</div>
+			<div class="delivery_date">
+				<p class="semibold">7—8 февраля</p>
+				<div class="delivery_date-list">
+					<div class="delivery_item-wrapper">
+						<div class="notification"><p>16</p></div>
+						<img src="/files/img/supplies/2-x2.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="delivery_refund">
+		<div class="refund">
+			<img src="./files/img/price_shipping.svg" alt="" />
+			<p class="caption">
+				Обратная доставка товаров на склад при отказе —
+				<mark
+					id="refundCost"
+					class="caption info_spoiler text--second-at-color">
+					бесплатно
+				</mark>
+			</p>
 		</div>
 	</div>
 </div>

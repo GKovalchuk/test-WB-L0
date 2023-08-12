@@ -42,6 +42,7 @@
 	line-height: var(--line-height_text--m);
 }
 
+/* title--s -> title--m */
 .title--m {
 	font-size: var(--font-size_title--s);
 	font-style: normal;
@@ -91,6 +92,7 @@
 }
 
 @media (width >= 64rem) {
+	/* title--s -> title--m */
 	.title--m {
 		font-size: var(--font-size_title--m);
 		font-style: normal;

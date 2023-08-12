@@ -18,10 +18,10 @@
 								@@include('html/blocks/delivery.html')
 								<!-- конец доставка -->
 								<!-- начало оплата -->
-								<div class="basket__payment"></div>
+								@@include('html/blocks/paymentMethod.html')
 								<!-- конец оплата -->
 								<!-- начало получатель -->
-								<div class="basket__recipient"></div>
+								@@include('html/blocks/client.html')
 								<!-- конец получатель -->
 							</div>
 
@@ -32,7 +32,7 @@
 					<!-- конец basket__content -->
 					<!-- начало basket__sidebar -->
 					<div class="basket__sidebar">
-						@@include('html/blocks/paymentDetails.html')
+						@@include('html/blocks/orderSum.html')
 						@@include('html/components/submit.html')
 					</div>
 					<!-- конец basket-sidebar -->

@@ -1,0 +1,23 @@
+.card {
+	display: flex;
+	width: 100%;
+}
+
+.card p {
+	margin-left: 0.5rem;
+}
+
+.card_icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.875rem;
+	height: 1.5rem;
+	margin: 0 0.0625rem;
+	border-radius: 0.25rem;
+	background: var(--smoky);
+}
+
+.card_date {
+	margin-left: 0.25rem;
+}

@@ -1,0 +1,106 @@
+.client,
+.client_field,
+.client_input,
+.client_field--name {
+	transition: color 0.1s linear;
+	width: 100%;
+	color: var(--gray);
+}
+
+.client {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+	gap: 1rem;
+	margin-bottom: 0.1875rem;
+	max-width: 43.75rem;
+	align-self: start;
+}
+
+.client_field,
+.client_field--name {
+	position: relative;
+	display: flex;
+	padding: 0.8125rem 0 1rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 0.1875rem;
+	margin-bottom: 0.125rem;
+	align-self: stretch;
+}
+
+.client_input {
+	box-sizing: border-box;
+	border: none;
+	outline: transparent;
+	padding: 0rem;
+}
+
+.client_input::placeholder {
+	padding: 0rem;
+	margin: 0rem;
+	transition: color 0.1s linear;
+}
+
+.client_field::before,
+.client_field--name::before {
+	position: absolute;
+	content: " ";
+	top: 78%;
+	left: 0;
+	width: 100%;
+	height: 0.0625rem;
+	background-color: rgba(0 0 0 / 10%);
+}
+
+.client_note {
+	position: absolute;
+	top: 87%;
+	font-size: 0.75rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 0.875rem;
+	color: var(--black);
+}
+
+.client_field--empty .client_input::placeholder {
+	color: var(--attention-color);
+}
+
+.client_error .client_note,
+.client_error .client_input {
+	color: var(--attention-color);
+}
+
+.client_error .client_field::before,
+.client_error .client_field--name::before {
+	background-color: var(--attention-color);
+}
+
+@media (width >= 64rem) {
+	.client {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		row-gap: 0.5rem;
+		column-gap: 1.25rem;
+	}
+
+	.client_field--name {
+		grid-column: span 3;
+	}
+
+	.client_field {
+		grid-column: span 2;
+	}
+
+	.client_field,
+	.client_field--name {
+		padding: 1.125rem 0 1rem;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		align-self: stretch;
+		gap: 0;
+	}
+}
