@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Главная</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230811222421" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230813235644" />
 </head>
 
 
@@ -66,43 +66,45 @@
 </header>
 		<div class="wrapper--scroll-area">
 			<main>
-				<form class="basket">
+				<form class="basket" id="basketForm">
 					<!-- начало basket__content -->
 					<div class="basket__content">
-						<h1>Корзина</h1>
+						<h1 class="h2-mobile">Корзина</h1>
 						<div class="basket__content_layout">
 							<!-- начало карточек товаров -->
-<div class="basket__content_supplies">
-	<div class="supplies">
-		<div class="supplies__controls">
-			<input
-				id="takeAllSupplies"
-				name="takeAllSupplies"
-				type="checkbox"
-				class="checkbox" />
-			<label
-				class="supplies__controls_checkbox checkbox_label"
-				for="takeAllSupplies">
-				<p>Выбрать все</p>
-			</label>
-			<button class="btn-collapse btn-expand">
-				<img src="./files/img/conrol_arrow.svg" alt="" />
-			</button>
+<div class="basket__content_supplies--wrapper">
+	<div class="basket__content_supplies">
+		<div class="supplies">
+			<div class="supplies__controls">
+				<input
+					id="takeAllSupplies"
+					name="takeAllSupplies"
+					type="checkbox"
+					class="checkbox" />
+				<label
+					class="supplies__controls_checkbox checkbox_label"
+					for="takeAllSupplies">
+					<p>Выбрать все</p>
+				</label>
+				<button class="btn-collapse btn-expand">
+					<img src="./files/img/conrol_arrow.svg" alt="" />
+				</button>
+			</div>
+			<div id="suppliesCards" class="supplies__cards"></div>
 		</div>
-		<div id="suppliesCards" class="supplies__cards"></div>
 	</div>
-</div>
-<div class="basket__content_supplies">
-	<div class="supplies supplies--out-of-stock">
-		<div class="supplies__controls">
-			<p id="outOfStockCounters" class="semibold supplies__controls_p"></p>
-			<button class="btn-collapse btn-expand--active">
-				<img src="./files/img/conrol_arrow.svg" alt="" />
-			</button>
+	<div class="basket__content_supplies">
+		<div class="supplies supplies--out-of-stock">
+			<div class="supplies__controls">
+				<p id="outOfStockCounters" class="semibold supplies__controls_p"></p>
+				<button class="btn-collapse btn-expand--active">
+					<img src="./files/img/conrol_arrow.svg" alt="" />
+				</button>
+			</div>
+			<div
+				id="suppliesCardsOutOfStock"
+				class="supplies__cards supplies__cards--out-of-stock"></div>
 		</div>
-		<div
-			id="suppliesCardsOutOfStock"
-			class="supplies__cards supplies__cards--out-of-stock"></div>
 	</div>
 </div>
 <!-- конец карточек товаров -->
@@ -110,31 +112,151 @@
 							<!-- начало деталей заказа -->
 							<div class="basket__content_order-details">
 								<!-- начало доставка -->
-								<div class="delivery">
-	<div class="delivery__title_wrapper">
-		<div class="delivery__details">
-			<div class="delivery__refund">
-				<div class="refund">
-					<p class="caption">
-						Обратная доставка товаров на склад при отказе —
-						<mark
-							id="refundCost"
-							class="caption info_spoiler text--second-at-color">
-							бесплатно
-						</mark>
-					</p>
+								<div class="white-section">
+	<div class="white-section_title">
+		<h3 class="title--m">Способ доставки</h3>
+		<button class="btn-text" type="button">
+			<h4>Изменить</h4>
+		</button>
+	</div>
+	<div class="delivery">
+		<div class="delivery_address-wrapper">
+			<div class="delivery_address">
+				<p class="semibold">Пункт выдачи</p>
+				<p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+			</div>
+			<div class="delivery_schedule">
+				<div class="card-rating">
+	<div class="card-rating_star">
+		<svg
+			width="12"
+			height="13"
+			viewBox="0 0 12 13"
+			fill="#FF970D"
+			xmlns="http://www.w3.org/2000/svg">
+			<path
+				id="Path (Stroke)"
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				d="M6.69769 1.48247C6.43817 0.861648 5.56198 0.861639 5.30244 1.48244L6.69769 1.48247ZM5.30244 1.48244L4.14719 4.24303L1.19202 4.49939C0.519264 4.55792 0.262282 5.39291 0.759713 5.82789L3.00514 7.7924L2.33207 10.7156C2.18436 11.3571 2.87792 11.89 3.46133 11.5356L6.00032 9.98936L8.53797 11.5348C9.12269 11.892 9.81568 11.3559 9.66861 10.7159L8.99549 7.79241L11.2402 5.82862C11.7385 5.39286 11.4793 4.55844 10.8083 4.49992L7.85294 4.24355L6.69769 1.48247" />
+		</svg>
+		<p class="caption">4.99</p>
+	</div>
+	<p class="caption">Ежедневно с 10 до 21</p>
+</div>
+
+			</div>
+			<div class="delivery_cost">
+				<p class="semibold">Стоимость доставки</p>
+				<p>Бесплатно</p>
+			</div>
+		</div>
+		<div class="delivery_dates">
+			<div class="delivery_date">
+				<p class="semibold">5—6 февраля</p>
+				<div class="delivery_date-list">
+					<div class="delivery_item-wrapper">
+						<picture><source srcset="/files/img/supplies/1-x2.webp" type="image/webp"><img src="/files/img/supplies/1-x2.png" alt="" /></picture>
+					</div>
+					<div class="delivery_item-wrapper">
+						<div class="notification">
+							<p>184</p>
+						</div>
+						<picture><source srcset="/files/img/supplies/2-x2.webp" type="image/webp"><img src="/files/img/supplies/2-x2.png" alt="" /></picture>
+					</div>
+					<div class="delivery_item-wrapper">
+						<div class="notification"><p>2</p></div>
+						<picture><source srcset="/files/img/supplies/3-x2.webp" type="image/webp"><img src="/files/img/supplies/3-x2.png" alt="" /></picture>
+					</div>
 				</div>
 			</div>
+			<div class="delivery_date">
+				<p class="semibold">7—8 февраля</p>
+				<div class="delivery_date-list">
+					<div class="delivery_item-wrapper">
+						<div class="notification"><p>16</p></div>
+						<picture><source srcset="/files/img/supplies/2-x2.webp" type="image/webp"><img src="/files/img/supplies/2-x2.png" alt="" /></picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="delivery_refund">
+		<div class="refund">
+			<img src="./files/img/price_shipping.svg" alt="" />
+			<p class="caption">
+				Обратная доставка товаров на склад при отказе —
+				<mark
+					id="refundCost"
+					class="caption info_spoiler text--second-at-color">
+					бесплатно
+				</mark>
+			</p>
 		</div>
 	</div>
 </div>
 
 								<!-- конец доставка -->
 								<!-- начало оплата -->
-								<div class="basket__payment"></div>
+								<div class="white-section">
+	<div class="white-section_title">
+		<h3 class="title--m">Способ оплаты</h3>
+		<button class="btn-text" type="button" data-modal="paymentModal">
+			<h4>Изменить</h4>
+		</button>
+	</div>
+	<div class="payment-method">
+		<div class="card">
+	<img class="card_icon" src="./files/img/mir.svg" alt="edit" />
+	<p class="caption">1234 12•• •••• 1234</p>
+	<div class="card_date">
+		<p class="caption">01/30</p>
+	</div>
+</div>
+
+		<p class="caption">Спишем оплату с карты при получении</p>
+	</div>
+</div>
+
 								<!-- конец оплата -->
 								<!-- начало получатель -->
-								<div class="basket__recipient"></div>
+								<div class="white-section">
+	<div class="white-section_title">
+		<h3 class="title--m">Получатель</h3>
+	</div>
+	<div class="client">
+		<div class="client_field--name">
+			<input
+				name="firstName"
+				id="clientsName"
+				type="text"
+				class="client_input" />
+			<label for="clientsName" class="client_label">Имя</label>
+		</div>
+		<div class="client_field--name">
+			<input
+				name="lastName"
+				id="clientsLastName"
+				type="text"
+				class="client_input" />
+			<label for="clientsLastName" class="client_label">Фамилия</label>
+		</div>
+		<div class="client_field">
+			<input name="email" id="clientsEmail" type="text" class="client_input" />
+			<label for="clientsEmail" class="client_label">Электронная почта</label>
+		</div>
+		<div class="client_field">
+			<input name="phone" type="tel" id="clientsPhone" class="client_input" />
+			<label for="clientsPhone" class="client_label">Телефон</label>
+		</div>
+		<div class="client_field">
+			<input name="inn" id="clientsInn" type="text" class="client_input" />
+			<label for="clientsInn" class="client_label">ИНН</label>
+			<p id="clientsInnError" class="client_note">Для таможенного оформления</p>
+		</div>
+	</div>
+</div>
+
 								<!-- конец получатель -->
 							</div>
 
@@ -193,22 +315,22 @@
 					<!-- конец basket__content -->
 					<!-- начало basket__sidebar -->
 					<div class="basket__sidebar">
-						<div class="payment-details">
-	<div class="payment-details_price">
+						<div class="order">
+	<div class="order_price">
 		<h3 class="title--m">Итого</h3>
-		<div id="priceTotal" class="payment-details_price--total ta-right">
-			<h3 class="title--m">2 101 063</h3>
+		<div class="order_price--total ta-right">
+			<h3 id="priceTotal" class="title--m">2 101 063</h3>
 			<h3>&nbspсом</h3>
 		</div>
-		<p>4 товара</p>
+		<p id="totalSup">4 товара</p>
 		<p id="priceFull" class="ta-right">2 302 048 сом</p>
 		<p>Скидка</p>
 		<p id="priceDiscount" class="ta-right">−200 985 сом</p>
 		<p>Доставка</p>
 		<p id="priceDelivery" class="ta-right">Бесплатно</p>
 	</div>
-	<div class="payment-details_item">
-		<div class="payment-details_item-details">
+	<div class="order_item">
+		<div class="order_item-details">
 			<div class="sidebar-card_title">
 				<h4 class="sidebar-card_title--text">Доставка в пункт выдачи</h4>
 				<img
@@ -237,39 +359,41 @@
 			</div>
 		</div>
 	</div>
-	<div class="payment-details_item">
-		<div class="payment-details_item-details">
+	<div class="order_item">
+		<div class="order_item-details">
 			<div class="sidebar-card_title">
 				<h4 class="sidebar-card_title--text">Оплата картой</h4>
 				<img
+					data-modal="paymentModal"
 					class="sidebar-card_title--icon"
 					src="./files/img/pencil.svg"
 					alt="edit" />
 			</div>
-			<div class="sidebar-card_description">
-				<img
-					class="sidebar-card_description--icon"
-					src="./files/img/mir.svg"
-					alt="edit" />
-				<p class="caption">1234 12•• •••• 1234</p>
-			</div>
+			<div class="card">
+	<img class="card_icon" src="./files/img/mir.svg" alt="edit" />
+	<p class="caption">1234 12•• •••• 1234</p>
+	<div class="card_date">
+		<p class="caption">01/30</p>
+	</div>
+</div>
+
 		</div>
 		<div class="darker-field">
 			<input
-				id="paymentImmediately"
-				name="paymentImmediately"
+				id="orderImmediately"
+				name="orderImmediately"
 				type="checkbox"
 				class="checkbox" />
 			<label
 				class="darker-field_checkbox checkbox_label"
-				for="paymentImmediately">
+				for="orderImmediately">
 				<p class="caption">Списать оплату сразу</p>
 			</label>
 			<p class="caption">Спишем оплату с карты при получении</p>
 		</div>
 	</div>
 </div>
-<!-- конец payment-details -->
+<!-- конец order -->
 
 						<!-- начало submit -->
 <div class="submit">
@@ -281,9 +405,9 @@
 		<p class="caption">
 			Соглашаюсь
 			<a class="caption info_link" href="#">
-				с правилами пользования&nbsp;торговой площадкой
+				с правилами пользования торговой площадкой
 			</a>
-			и&nbsp;
+			и
 			<a class="caption info_link" href="#">возврата</a>
 		</p>
 	</div>
@@ -415,7 +539,95 @@
 	</ul>
 </nav>
 <!-- конец tabbar -->
+ <div class="modal" id="paymentModal">
+	<div class="modal__content">
+		<div class="modal__title">
+			<h3 class="h3-mobile">Способ оплаты</h3>
+			<button class="modal__close" type="button">
+				<img src="/files/img/search-close.svg" alt="Закрыть" />
+			</button>
+		</div>
+		<form id="paymentForm" class="modal__form">
+			<div class="modal__radio">
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption1"
+						type="radio"
+						value="mir"
+						checked
+						class="radio" />
+					<label class="radio-label" for="paymentOption1"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/mir.svg"
+								alt="mir" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption2"
+						type="radio"
+						value="visa"
+						class="radio" />
+					<label class="radio-label" for="paymentOption2"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/visa.svg"
+								alt="visa" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption3"
+						type="radio"
+						value="mastercard"
+						class="radio" />
+					<label class="radio-label" for="paymentOption3"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/mastercard.svg"
+								alt="master" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption4"
+						value="maestro"
+						type="radio"
+						class="radio" />
+					<label class="radio-label" for="paymentOption4"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/maestro.svg"
+								alt="maestro" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+			</div>
+			<div class="modal__button">
+				<button class="btn-main" type="submit">
+					<h4>Выбрать</h4>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
 
-		<script type="module" src="js/app.min.js?_v=20230811222421"></script>
+		<script type="module" src="js/app.min.js?_v=20230813235644"></script>
 	</body>
 </html>

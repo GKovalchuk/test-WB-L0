@@ -1,41 +1,45 @@
-.payment-details {
+.order {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 1.093rem;
 }
 
-.payment-details_price {
+.order_price {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	width: 100%;
 }
 
-.payment-details_price h3,
-.payment-details_price p {
+.order_price h3,
+.order_price p {
 	margin: 0;
 }
 
-.payment-details_price--total {
+.order_price--total {
 	display: flex;
 	align-items: flex-end;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.4375rem;
+}
+
+.order_item-details {
+	display: none;
 }
 
 @media (width >= 64rem) {
-	.payment-details {
+	.order {
 		align-items: flex-start;
 		gap: 1.5rem;
 	}
 
-	.payment-details_item {
+	.order_item {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 0.75rem;
+		gap: 0.935rem;
 		align-self: stretch;
 	}
 
-	.payment-details_item-details {
+	.order_item-details {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -43,8 +47,11 @@
 		gap: 0.25rem;
 		border-radius: 0.5rem;
 	}
+	.order_item-details .card_date {
+		display: none;
+	}
 
-	.payment-details_shipping {
+	.order_shipping {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -52,7 +59,7 @@
 		gap: 0.75rem;
 	}
 
-	.payment-details_shipping-destination {
+	.order_shipping-destination {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;

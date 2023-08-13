@@ -1,0 +1,88 @@
+<div class="modal" id="paymentModal">
+	<div class="modal__content">
+		<div class="modal__title">
+			<h3 class="h3-mobile">Способ оплаты</h3>
+			<button class="modal__close" type="button">
+				<img src="/files/img/search-close.svg" alt="Закрыть" />
+			</button>
+		</div>
+		<form id="paymentForm" class="modal__form">
+			<div class="modal__radio">
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption1"
+						type="radio"
+						value="mir"
+						checked
+						class="radio" />
+					<label class="radio-label" for="paymentOption1"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/mir.svg"
+								alt="mir" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption2"
+						type="radio"
+						value="visa"
+						class="radio" />
+					<label class="radio-label" for="paymentOption2"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/visa.svg"
+								alt="visa" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption3"
+						type="radio"
+						value="mastercard"
+						class="radio" />
+					<label class="radio-label" for="paymentOption3"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/mastercard.svg"
+								alt="master" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption4"
+						value="maestro"
+						type="radio"
+						class="radio" />
+					<label class="radio-label" for="paymentOption4"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/maestro.svg"
+								alt="maestro" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+			</div>
+			<div class="modal__button">
+				<button class="btn-main" type="submit">
+					<h4>Выбрать</h4>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

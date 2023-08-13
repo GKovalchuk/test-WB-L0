@@ -1,21 +1,30 @@
 /* blocks */
-@import url("./blocks/header.css");
-@import url("./blocks/main.css");
-@import url("./blocks/footer.css");
-@import url("./blocks/tabbar.css");
 @import url("./blocks/basket.css");
-@import url("./blocks/paymentDetails.css");
+@import url("./blocks/delivery.css");
+@import url("./blocks/client.css");
+@import url("./blocks/header.css");
+@import url("./blocks/footer.css");
+@import url("./blocks/main.css");
+@import url("./blocks/orderSum.css");
 @import url("./blocks/supplies.css");
+@import url("./blocks/tabbar.css");
 
 /* components */
-@import url("./components/search.css");
-@import url("./components/submit.css");
-@import url("./components/checkbox.css");
-@import url("./components/button.css");
-@import url("./components/notification.css");
-@import url("./components/darkerField.css");
 @import url("./components/basketCard.css");
-@import url("./components/sidebarCard.css");
+@import url("./components/button.css");
+@import url("./components/card.css");
+@import url("./components/cardRating.css");
+@import url("./components/checkbox.css");
 @import url("./components/counter.css");
+@import url("./components/darkerField.css");
 @import url("./components/dropdown.css");
+@import url("./components/modal.css");
+@import url("./components/notification.css");
+@import url("./components/paymentMethod.css");
 @import url("./components/priceBlock.css");
+@import url("./components/radio.css");
+@import url("./components/refund.css");
+@import url("./components/search.css");
+@import url("./components/sidebarCard.css");
+@import url("./components/submit.css");
+@import url("./components/whiteSection.css");

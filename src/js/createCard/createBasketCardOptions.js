@@ -1,6 +1,7 @@
 import { createElement } from "../createElement.js";
 import { incAmount, decAmount } from "../changeAmount/changeAmount.js";
 import { createPriceBlock } from "./createPriceBlock.js";
+import { renderPricesData } from "../changeAmount/renderPricesData.js";
 
 export const createBasketCardOptions = ({
 	id,
@@ -99,6 +100,7 @@ export const createBasketCardOptions = ({
 	bucketIcon.addEventListener("click", () => {
 		const basketCard = document.getElementById(`basketCard${id}`);
 		basketCard.remove();
+		renderPricesData();
 	});
 
 	if (amountTotal > 0) {

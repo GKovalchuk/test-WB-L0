@@ -19,6 +19,7 @@ export const createPriceBlock = (
 			hPrice = createElement("h4", "title--s");
 		}
 		hPrice.innerHTML = priceStr;
+		hPrice.id = `price${id}`;
 		return hPrice;
 	};
 
@@ -42,6 +43,7 @@ export const createPriceBlock = (
 	// Наполнение основных элементов
 	priceWrapper.id = `priceWrapper${id}`;
 	h4Currency.innerHTML = "&nbspсом";
+	s.id = `discount${id}`;
 	s.innerHTML = `${createMaskForNumbers(price * amount)} сом`;
 
 	// Наполнение выпадающего списка

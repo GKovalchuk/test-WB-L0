@@ -1,35 +1,37 @@
 <!-- начало карточек товаров -->
-<div class="basket__content_supplies">
-	<div class="supplies">
-		<div class="supplies__controls">
-			<input
-				id="takeAllSupplies"
-				name="takeAllSupplies"
-				type="checkbox"
-				class="checkbox" />
-			<label
-				class="supplies__controls_checkbox checkbox_label"
-				for="takeAllSupplies">
-				<p>Выбрать все</p>
-			</label>
-			<button class="btn-collapse btn-expand">
-				<img src="./files/img/conrol_arrow.svg" alt="" />
-			</button>
+<div class="basket__content_supplies--wrapper">
+	<div class="basket__content_supplies">
+		<div class="supplies">
+			<div class="supplies__controls">
+				<input
+					id="takeAllSupplies"
+					name="takeAllSupplies"
+					type="checkbox"
+					class="checkbox" />
+				<label
+					class="supplies__controls_checkbox checkbox_label"
+					for="takeAllSupplies">
+					<p>Выбрать все</p>
+				</label>
+				<button class="btn-collapse btn-expand">
+					<img src="./files/img/conrol_arrow.svg" alt="" />
+				</button>
+			</div>
+			<div id="suppliesCards" class="supplies__cards"></div>
 		</div>
-		<div id="suppliesCards" class="supplies__cards"></div>
 	</div>
-</div>
-<div class="basket__content_supplies">
-	<div class="supplies supplies--out-of-stock">
-		<div class="supplies__controls">
-			<p id="outOfStockCounters" class="semibold supplies__controls_p"></p>
-			<button class="btn-collapse btn-expand--active">
-				<img src="./files/img/conrol_arrow.svg" alt="" />
-			</button>
+	<div class="basket__content_supplies">
+		<div class="supplies supplies--out-of-stock">
+			<div class="supplies__controls">
+				<p id="outOfStockCounters" class="semibold supplies__controls_p"></p>
+				<button class="btn-collapse btn-expand--active">
+					<img src="./files/img/conrol_arrow.svg" alt="" />
+				</button>
+			</div>
+			<div
+				id="suppliesCardsOutOfStock"
+				class="supplies__cards supplies__cards--out-of-stock"></div>
 		</div>
-		<div
-			id="suppliesCardsOutOfStock"
-			class="supplies__cards supplies__cards--out-of-stock"></div>
 	</div>
 </div>
 <!-- конец карточек товаров -->

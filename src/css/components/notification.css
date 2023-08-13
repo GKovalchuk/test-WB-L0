@@ -1,14 +1,15 @@
 .notification {
-	display: inline-flex;
+	display: flex;
 	position: absolute;
-	top: -0.2rem;
-	right: -0.4rem;
+	top: -0.5rem;
+	right: -0.15rem;
 	flex-direction: column;
 	align-items: center;
 	justify-content: end;
 	min-width: 1rem;
+	width: auto;
 	height: 1rem;
-	padding: 0 0.125rem;
+	padding: 0 0.25rem;
 	-webkit-transform: rotate(0.074deg);
 	transform: rotate(0.074deg);
 	border-radius: 1rem;
