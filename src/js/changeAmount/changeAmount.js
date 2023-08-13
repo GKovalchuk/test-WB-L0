@@ -1,12 +1,14 @@
-import { localData } from "../app.js";
+import { localData, formData } from "../app.js";
 import { createPriceBlock } from "../createCard/createPriceBlock.js";
 import { createBasketCardOptions } from "../createCard/createBasketCardOptions.js";
+import { renderPricesData } from "../changeAmount/renderPricesData.js";
 
 // увеличение количества товаров по "+"
 export const incAmount = (amountTotal, supId) => {
 	const curData = localData.filter(({ id }) => id === supId)[0];
 	curData.amount += 1;
-	renderNewElements(supId, curData);
+	renderNewElementsInCards(supId, curData);
+	renderPricesData();
 };
 
 // уменьшение количества товаров по "-"
@@ -14,6 +16,7 @@ export const decAmount = (amountTotal, supId) => {
 	const curData = localData.filter(({ id }) => id === supId)[0];
 	curData.amount -= 1;
 	renderNewElementsInCards(supId, curData);
+	renderPricesData();
 };
 
 // отправка команды на перерисовку элементов в карточке товара

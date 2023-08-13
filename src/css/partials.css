@@ -18,9 +18,11 @@
 @import url("./components/counter.css");
 @import url("./components/darkerField.css");
 @import url("./components/dropdown.css");
+@import url("./components/modal.css");
 @import url("./components/notification.css");
 @import url("./components/paymentMethod.css");
 @import url("./components/priceBlock.css");
+@import url("./components/radio.css");
 @import url("./components/refund.css");
 @import url("./components/search.css");
 @import url("./components/sidebarCard.css");

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Главная</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230813144502" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230813235644" />
 </head>
 
 
@@ -201,7 +201,7 @@
 								<div class="white-section">
 	<div class="white-section_title">
 		<h3 class="title--m">Способ оплаты</h3>
-		<button class="btn-text" type="button">
+		<button class="btn-text" type="button" data-modal="paymentModal">
 			<h4>Изменить</h4>
 		</button>
 	</div>
@@ -226,11 +226,12 @@
 	</div>
 	<div class="client">
 		<div class="client_field--name">
-			<input type="name" id="clientsName" type="text" class="client_input" />
+			<input
+				name="firstName"
+				id="clientsName"
+				type="text"
+				class="client_input" />
 			<label for="clientsName" class="client_label">Имя</label>
-			<!-- <p id="clientNameError" class="client_error">
-				Используйте латинские буквы
-			</p> -->
 		</div>
 		<div class="client_field--name">
 			<input
@@ -239,21 +240,14 @@
 				type="text"
 				class="client_input" />
 			<label for="clientsLastName" class="client_label">Фамилия</label>
-			<!-- <p id="clientLastNameError" class="client_error">
-				Используйте латинские буквы
-			</p> -->
 		</div>
 		<div class="client_field">
 			<input name="email" id="clientsEmail" type="text" class="client_input" />
 			<label for="clientsEmail" class="client_label">Электронная почта</label>
-			<!-- <p id="clientEmailError" class="client_error">
-				Проверьте адрес электронной почты
-			</p> -->
 		</div>
 		<div class="client_field">
 			<input name="phone" type="tel" id="clientsPhone" class="client_input" />
 			<label for="clientsPhone" class="client_label">Телефон</label>
-			<!-- <p id="clientPhoneError" class="client_error">Формат: +9 999 999 99 99</p> -->
 		</div>
 		<div class="client_field">
 			<input name="inn" id="clientsInn" type="text" class="client_input" />
@@ -324,11 +318,11 @@
 						<div class="order">
 	<div class="order_price">
 		<h3 class="title--m">Итого</h3>
-		<div id="priceTotal" class="order_price--total ta-right">
-			<h3 class="title--m">2 101 063</h3>
+		<div class="order_price--total ta-right">
+			<h3 id="priceTotal" class="title--m">2 101 063</h3>
 			<h3>&nbspсом</h3>
 		</div>
-		<p>4 товара</p>
+		<p id="totalSup">4 товара</p>
 		<p id="priceFull" class="ta-right">2 302 048 сом</p>
 		<p>Скидка</p>
 		<p id="priceDiscount" class="ta-right">−200 985 сом</p>
@@ -370,6 +364,7 @@
 			<div class="sidebar-card_title">
 				<h4 class="sidebar-card_title--text">Оплата картой</h4>
 				<img
+					data-modal="paymentModal"
 					class="sidebar-card_title--icon"
 					src="./files/img/pencil.svg"
 					alt="edit" />
@@ -544,7 +539,95 @@
 	</ul>
 </nav>
 <!-- конец tabbar -->
+ <div class="modal" id="paymentModal">
+	<div class="modal__content">
+		<div class="modal__title">
+			<h3 class="h3-mobile">Способ оплаты</h3>
+			<button class="modal__close" type="button">
+				<img src="/files/img/search-close.svg" alt="Закрыть" />
+			</button>
+		</div>
+		<form id="paymentForm" class="modal__form">
+			<div class="modal__radio">
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption1"
+						type="radio"
+						value="mir"
+						checked
+						class="radio" />
+					<label class="radio-label" for="paymentOption1"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/mir.svg"
+								alt="mir" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption2"
+						type="radio"
+						value="visa"
+						class="radio" />
+					<label class="radio-label" for="paymentOption2"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/visa.svg"
+								alt="visa" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption3"
+						type="radio"
+						value="mastercard"
+						class="radio" />
+					<label class="radio-label" for="paymentOption3"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/mastercard.svg"
+								alt="master" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+				<div class="modal__radio-wrapper">
+					<input
+						name="paymentOption"
+						id="paymentOption4"
+						value="maestro"
+						type="radio"
+						class="radio" />
+					<label class="radio-label" for="paymentOption4"
+						><div class="card">
+							<img
+								class="card_icon--radio"
+								src="./files/img/maestro.svg"
+								alt="maestro" />
+							<p>1234 56•• •••• 1234</p>
+						</div>
+					</label>
+				</div>
+			</div>
+			<div class="modal__button">
+				<button class="btn-main" type="submit">
+					<h4>Выбрать</h4>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
 
-		<script type="module" src="js/app.min.js?_v=20230813144502"></script>
+		<script type="module" src="js/app.min.js?_v=20230813235644"></script>
 	</body>
 </html>

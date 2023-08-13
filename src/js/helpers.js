@@ -1,10 +1,10 @@
-export function createMaskForNumbers(num) {
+export function createMaskForNumbers(num, space = "&thinsp;") {
 	let newStr = `${Math.round(num)}`;
 	newStr = newStr
 		.split("")
 		.map((num, i, arr) => {
 			return (arr.length - 1 - i) % 3 === 0 && i !== arr.length - 1
-				? num + "&thinsp;"
+				? num + space
 				: num;
 		})
 		.join("");

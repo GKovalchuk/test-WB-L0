@@ -6,6 +6,7 @@ import {
 	formatForInn,
 	removeEnterSubmit,
 } from "./setMasks.js";
+import { toggleCheckbox } from "./chreckbox.js";
 
 // создание listeners для полей ввода
 export function createInputListeners() {
@@ -18,6 +19,10 @@ export function createInputListeners() {
 		input.addEventListener("change", validateInput);
 		// отмена отправки из инпута по enter
 		input.addEventListener("keydown", removeEnterSubmit);
+		if (input.type === "checkbox") {
+			input.addEventListener("click", toggleCheckbox);
+			input.addEventListener("keydown", toggleCheckbox);
+		}
 	}
 
 	// добавление и скрытие "+" у номера телефона

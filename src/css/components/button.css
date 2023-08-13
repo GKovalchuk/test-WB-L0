@@ -12,6 +12,8 @@
 }
 
 .btn-main h4 {
+	margin: 0;
+	margin-top: -0.3125rem;
 	position: relative;
 	bottom: var(--text-height-adjustment);
 }

@@ -57,7 +57,7 @@ export function formatForInn(e) {
 	const key = e.key;
 
 	if (
-		(key >= "0" && key <= "9" && value.length < 15) ||
+		(key >= "0" && key <= "9" && value.length < 14) ||
 		key == "Backspace" ||
 		key == "Delete"
 	) {

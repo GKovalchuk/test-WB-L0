@@ -1,11 +1,11 @@
 <div class="order">
 	<div class="order_price">
 		<h3 class="title--m">Итого</h3>
-		<div id="priceTotal" class="order_price--total ta-right">
-			<h3 class="title--m">2 101 063</h3>
+		<div class="order_price--total ta-right">
+			<h3 id="priceTotal" class="title--m">2 101 063</h3>
 			<h3>&nbspсом</h3>
 		</div>
-		<p>4 товара</p>
+		<p id="totalSup">4 товара</p>
 		<p id="priceFull" class="ta-right">2 302 048 сом</p>
 		<p>Скидка</p>
 		<p id="priceDiscount" class="ta-right">−200 985 сом</p>
@@ -47,6 +47,7 @@
 			<div class="sidebar-card_title">
 				<h4 class="sidebar-card_title--text">Оплата картой</h4>
 				<img
+					data-modal="paymentModal"
 					class="sidebar-card_title--icon"
 					src="./files/img/pencil.svg"
 					alt="edit" />

@@ -1,13 +1,16 @@
 .card {
 	display: flex;
 	width: 100%;
+	align-items: center;
 }
 
 .card p {
+	height: min-content;
 	margin-left: 0.5rem;
 }
 
-.card_icon {
+.card_icon,
+.card_icon--radio {
 	display: flex;
 	align-items: center;
 	justify-content: center;

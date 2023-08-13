@@ -71,7 +71,8 @@
 .client_input:active + .client_label,
 .client_input:focus + .client_label,
 .client_input:hover + .client_label,
-.client_input--has-value .client_label {
+.client_input--has-value .client_label,
+.client_field--empty .client_label {
 	top: -0.1875rem;
 	font-size: var(--font-size_text--s);
 	font-style: normal;
@@ -83,7 +84,7 @@
 .client_error,
 .client_input--error,
 .client_field--empty .client_label,
-.client_input--empty .client_input {
+.client_input--empty .client_input::placeholder {
 	color: var(--attention-color);
 }
 
