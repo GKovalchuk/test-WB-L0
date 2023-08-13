@@ -4,55 +4,39 @@
 	</div>
 	<div class="client">
 		<div class="client_field--name">
-			<label for="clientName" class="client_label"></label>
-			<input
-				id="clientName"
-				type="text"
-				class="client_input"
-				placeholder="Имя" />
+			<input type="name" id="clientsName" type="text" class="client_input" />
+			<label for="clientsName" class="client_label">Имя</label>
 			<!-- <p id="clientNameError" class="client_error">
 				Используйте латинские буквы
 			</p> -->
 		</div>
 		<div class="client_field--name">
-			<label for="clientLastName" class="client_label"></label>
 			<input
-				id="clientLastName"
+				name="lastName"
+				id="clientsLastName"
 				type="text"
-				class="client_input"
-				placeholder="Фамилия" />
+				class="client_input" />
+			<label for="clientsLastName" class="client_label">Фамилия</label>
 			<!-- <p id="clientLastNameError" class="client_error">
 				Используйте латинские буквы
 			</p> -->
 		</div>
 		<div class="client_field">
-			<label for="clientEmail" class="client_label"></label>
-			<input
-				id="clientEmail"
-				type="text"
-				class="client_input"
-				placeholder="Электронная почта" />
+			<input name="email" id="clientsEmail" type="text" class="client_input" />
+			<label for="clientsEmail" class="client_label">Электронная почта</label>
 			<!-- <p id="clientEmailError" class="client_error">
 				Проверьте адрес электронной почты
 			</p> -->
 		</div>
 		<div class="client_field">
-			<label for="clientPhone" class="client_label"></label>
-			<input
-				id="clientPhone"
-				type="text"
-				class="client_input"
-				placeholder="Телефон" />
+			<input name="phone" type="tel" id="clientsPhone" class="client_input" />
+			<label for="clientsPhone" class="client_label">Телефон</label>
 			<!-- <p id="clientPhoneError" class="client_error">Формат: +9 999 999 99 99</p> -->
 		</div>
 		<div class="client_field">
-			<label for="clientInn" class="client_label"></label>
-			<input
-				id="clientInn"
-				type="text"
-				class="client_input"
-				placeholder="ИНН" />
-			<p id="clientInnError" class="client_note">Для таможенного оформления</p>
+			<input name="inn" id="clientsInn" type="text" class="client_input" />
+			<label for="clientsInn" class="client_label">ИНН</label>
+			<p id="clientsInnError" class="client_note">Для таможенного оформления</p>
 		</div>
 	</div>
 </div>

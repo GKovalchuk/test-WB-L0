@@ -1,6 +1,7 @@
 .client,
 .client_field,
 .client_input,
+.client_label,
 .client_field--name {
 	transition: color 0.1s linear;
 	width: 100%;
@@ -21,7 +22,7 @@
 .client_field--name {
 	position: relative;
 	display: flex;
-	padding: 0.8125rem 0 1rem;
+	padding: 1rem 0;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
@@ -37,10 +38,11 @@
 	padding: 0rem;
 }
 
-.client_input::placeholder {
-	padding: 0rem;
-	margin: 0rem;
-	transition: color 0.1s linear;
+.client_label {
+	position: absolute;
+	top: 0.875rem;
+	left: -0.0625rem;
+	transition: color 0.1s linear, top 0.1s linear, font-size 0.1s linear;
 }
 
 .client_field::before,
@@ -54,7 +56,8 @@
 	background-color: rgba(0 0 0 / 10%);
 }
 
-.client_note {
+.client_note,
+.client_error {
 	position: absolute;
 	top: 87%;
 	font-size: 0.75rem;
@@ -64,17 +67,28 @@
 	color: var(--black);
 }
 
-.client_field--empty .client_input::placeholder {
+/* смещение label */
+.client_input:active + .client_label,
+.client_input:focus + .client_label,
+.client_input:hover + .client_label,
+.client_input--has-value .client_label {
+	top: -0.1875rem;
+	font-size: var(--font-size_text--s);
+	font-style: normal;
+	font-weight: var(--font-weigth_text--s);
+	line-height: var(--line-height_text--s);
+}
+
+/* ошибки */
+.client_error,
+.client_input--error,
+.client_field--empty .client_label,
+.client_input--empty .client_input {
 	color: var(--attention-color);
 }
 
-.client_error .client_note,
-.client_error .client_input {
-	color: var(--attention-color);
-}
-
-.client_error .client_field::before,
-.client_error .client_field--name::before {
+.client_input--has-value .client_field::before,
+.client_input--has-value .client_field--name::before {
 	background-color: var(--attention-color);
 }
 
