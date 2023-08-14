@@ -1,38 +1,38 @@
 .notification {
-	display: flex;
-	position: absolute;
-	top: -0.5rem;
-	right: -0.15rem;
-	flex-direction: column;
-	align-items: center;
-	justify-content: end;
-	min-width: 1rem;
-	width: auto;
-	height: 1rem;
-	padding: 0 0.25rem;
-	-webkit-transform: rotate(0.074deg);
-	transform: rotate(0.074deg);
-	border-radius: 1rem;
-	background: var(--attention-color);
-	text-align: center;
+  display: flex;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.15rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  width: auto;
+  min-width: 1rem;
+  height: 1rem;
+  padding: 0 0.25rem;
+  -webkit-transform: rotate(0.074deg);
+  transform: rotate(0.074deg);
+  border-radius: 1rem;
+  background: var(--attention-color);
+  text-align: center;
 }
 
 .notification p {
-	-webkit-transform: rotate(0.074deg);
-	transform: rotate(0.074deg);
-	color: var(--white);
-	font-size: 0.625rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 1.125rem;
+  -webkit-transform: rotate(0.074deg);
+  transform: rotate(0.074deg);
+  color: var(--white);
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.125rem;
 }
 
 .notification--header-links {
-	top: -0.25rem;
-	right: 0.5rem;
+  top: -0.25rem;
+  right: 0.5rem;
 }
 
 .notification--tabbar {
-	top: -0.2rem;
-	right: -0.4rem;
+  top: -0.2rem;
+  right: -0.4rem;
 }

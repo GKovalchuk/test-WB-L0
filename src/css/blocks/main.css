@@ -1,16 +1,16 @@
 .basket-wrapper {
-	display: block;
-	margin: 0.63rem 0 2.13rem;
-	padding: 1.5rem 0 2.5rem;
-	gap: 1rem;
+  display: block;
+  margin: 0.63rem 0 2.13rem;
+  padding: 1.5rem 0 2.5rem;
+  gap: 1rem;
 }
 
 @media (width >= 64rem) {
-	.basket-wrapper {
-		display: flex;
-		flex-wrap: nowrap;
-		height: 1825px;
-		padding: 0 1.5rem 1rem;
-		gap: 2rem;
-	}
+  .basket-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 1825px;
+    padding: 0 1.5rem 1rem;
+    gap: 2rem;
+  }
 }

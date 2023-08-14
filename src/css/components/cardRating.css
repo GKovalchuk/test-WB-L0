@@ -1,18 +1,17 @@
 .card-rating {
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-
-	gap: 0.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .card-rating svg {
-	margin-top: 0.125rem;
+  margin-top: 0.125rem;
 }
 
 .card-rating_star {
-	display: flex;
-	align-items: flex-start;
-	align-self: stretch;
-	gap: 0.25rem;
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 0.25rem;
 }

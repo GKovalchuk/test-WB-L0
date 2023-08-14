@@ -1,13 +1,13 @@
 .payment-method {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
 }
 
 .payment-method .card .caption {
-	font-size: inherit;
-	font-style: normal;
-	font-weight: inherit;
-	line-height: inherit;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  line-height: inherit;
 }

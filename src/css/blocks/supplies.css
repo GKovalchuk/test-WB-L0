@@ -1,62 +1,62 @@
 .supplies {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	align-self: stretch;
-	gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 1rem;
 }
 
 .supplies__controls {
-	display: flex;
-	position: relative;
-	align-items: center;
-	gap: 0.6875rem;
-	align-self: stretch;
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 0.6875rem;
+  align-self: stretch;
 }
 
 .supplies__controls::after {
-	content: " ";
-	position: absolute;
-	bottom: calc(-1rem);
-	width: 100%;
-	height: 0.0625rem;
-	background-color: rgba(0 0 0 / 10%);
+  content: " ";
+  position: absolute;
+  bottom: calc(-1rem);
+  width: 100%;
+  height: 0.0625rem;
+  background-color: rgba(0 0 0 / 10%);
 }
 
 .supplies__controls_checkbox,
 .supplies__controls_p {
-	display: flex;
-	flex: 1 0 0;
-	align-items: center;
-	height: 1.5rem;
-	gap: 0.6875rem;
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+  height: 1.5rem;
+  gap: 0.6875rem;
 }
 
 .supplies__controls p {
-	padding-bottom: 0.3125rem;
+  padding-bottom: 0.3125rem;
 }
 
 .supplies__cards,
 .supplies__cards--out-of-stock {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 1rem;
-	align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
 }
 
 .supplies--out-of-stock img {
-	filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .supplies__cards--out-of-stock .basket-card_options-amount,
 .supplies__cards--out-of-stock .basket-card_options {
-	height: 1.5rem;
+  height: 1.5rem;
 }
 
 @media (width >= 64rem) {
-	.supplies__cards,
-	.supplies__cards--out-of-stock {
-		gap: 1.25rem;
-	}
+  .supplies__cards,
+  .supplies__cards--out-of-stock {
+    gap: 1.25rem;
+  }
 }
