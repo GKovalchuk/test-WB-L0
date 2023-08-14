@@ -30,7 +30,6 @@ const findPriceFull = (ids) =>
 		const elem = document.getElementById(`discount${id}`);
 		let text = elem.textContent;
 		text = text.slice(0, text.indexOf(" сом"));
-		console.log(text);
 		text = text.replace(/ /g, "");
 		acc += Number(text);
 		return acc;
@@ -60,8 +59,6 @@ export const renderPricesData = () => {
 
 	const sumPrices = findSumPrices(ids);
 	const priceFull = findPriceFull(ids);
-	console.log(sumPrices);
-	console.log(priceFull);
 
 	renderTotalPrices(sumPrices, priceFull, ids.length);
 

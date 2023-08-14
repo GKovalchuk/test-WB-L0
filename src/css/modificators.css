@@ -9,6 +9,13 @@
 	line-height: var(--line-height_text--s);
 }
 
+.caption-bold {
+	font-size: var(--font-size_text--s);
+	font-style: normal;
+	font-weight: 700;
+	line-height: var(--line-height_text--s);
+}
+
 .semibold {
 	font-size: var(--font-size_text--m);
 	font-style: normal;
@@ -69,6 +76,10 @@
 
 .text--ac-color {
 	color: var(--accent-color);
+}
+
+.text--gray-color {
+	color: var(--gray);
 }
 
 .text--second-at-color {

@@ -10,12 +10,9 @@ function handleFormSubmit(event) {
 	event.preventDefault();
 	const errors = [];
 
-	// checkErrors();
 	for (let input of inputsForm) {
-		// console.log(input);
 		errors.push(checkEmptyInput(input));
 	}
-	console.log(errors);
 	if (errors.includes(true)) {
 		return;
 	}
@@ -29,7 +26,6 @@ function handleFormSubmit(event) {
 	const textData = Array.from(Object.entries(formData))
 		.map(([key, value]) => `${key}: ${value}`)
 		.join(";\n");
-	// console.log();
 	alert("Форма отправлена:\n" + textData);
 	event.target.reset();
 }
