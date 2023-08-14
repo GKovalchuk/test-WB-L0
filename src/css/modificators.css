@@ -9,6 +9,13 @@
 	line-height: var(--line-height_text--s);
 }
 
+.caption-bold {
+	font-size: var(--font-size_text--s);
+	font-style: normal;
+	font-weight: 700;
+	line-height: var(--line-height_text--s);
+}
+
 .semibold {
 	font-size: var(--font-size_text--m);
 	font-style: normal;
@@ -37,9 +44,9 @@
 .h3-mobile {
 	font-size: 1.25rem;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 1.75rem;
-	letter-spacing: -0.0125rem;
+	letter-spacing: -0.04rem;
 	margin: 0;
 }
 
@@ -69,6 +76,10 @@
 
 .text--ac-color {
 	color: var(--accent-color);
+}
+
+.text--gray-color {
+	color: var(--gray);
 }
 
 .text--second-at-color {
@@ -126,7 +137,7 @@
 		line-height: inherit;
 	}
 
-	.h2-mobile {
+	.h3-mobile {
 		font-size: var(--font-size_title--s);
 		font-style: normal;
 		font-weight: var(--font-weigth_title--s);

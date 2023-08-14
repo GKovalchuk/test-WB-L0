@@ -1,15 +1,17 @@
 <div class="white-section">
 	<div class="white-section_title">
 		<h3 class="title--m">Способ доставки</h3>
-		<button class="btn-text" type="button">
+		<button class="btn-text" type="button" data-modal="deliveryModal">
 			<h4>Изменить</h4>
 		</button>
 	</div>
 	<div class="delivery">
 		<div class="delivery_address-wrapper">
 			<div class="delivery_address">
-				<p class="semibold">Пункт выдачи</p>
-				<p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+				<p class="semibold delivery_address--method">Пункт выдачи</p>
+				<p class="delivery_address--text">
+					Бишкек, улица Ахматбека Суюмбаева, 12/1
+				</p>
 			</div>
 			<div class="delivery_schedule">
 				@@include('../components/cardRating.html')

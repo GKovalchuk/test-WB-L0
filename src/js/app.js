@@ -5,10 +5,14 @@ import { paymentFormLogic } from "./modal/modalPaymentForm.js";
 import { formLogic } from "./form/form.js";
 import { modalsListener } from "./modal/modal.js";
 import { renderPricesData } from "./changeAmount/renderPricesData.js";
+import { deliveryFormLogic } from "./modal/modalDeliveryForm.js";
 
 export const localData = [...data];
 export const formData = {
-	delivery: "",
+	deliveryOption: [
+		"Доставка в пункт выдачи",
+		"Бишкек, улица Ахматбека Суюмбаева, 12/1",
+	],
 	paymentOption: "mir",
 	client: {},
 	priceSum: 2101063,
@@ -22,22 +26,13 @@ export const render = () => {
 render();
 createInputListeners();
 paymentFormLogic();
+deliveryFormLogic();
 formLogic();
 modalsListener();
 
 window.addEventListener("DOMContentLoaded", renderPricesData);
 
-// изменение значений в Итого
-// верстка модалки с адресами
-// товары добавление в форму значений
-// изменение адреса доставки
-
 // правка верстки на промежуточных разрешениях
+// изменение чисел в уведомлениях
 // раскрытие выпадающего списка
-// чекбокс - нажатие по enter
-// смена инпута по enter
-
-// чекбокс добавление в форму значений
-// изменение способа оплаты
-// отправка формы
-// проверка на пустые поля
+// поведение инпутов по tab и enter
