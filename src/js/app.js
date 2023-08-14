@@ -33,6 +33,6 @@ modalsListener();
 window.addEventListener("DOMContentLoaded", renderPricesData);
 
 // правка верстки на промежуточных разрешениях
+// изменение чисел в уведомлениях
 // раскрытие выпадающего списка
-// чекбокс - нажатие по enter
-// смена инпута по enter
+// поведение инпутов по tab и enter
