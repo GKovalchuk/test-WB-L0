@@ -82,6 +82,10 @@
   color: var(--gray);
 }
 
+.text--gray-dark-color {
+  color: var(--gray-dark);
+}
+
 .text--second-at-color {
   color: var(--attention-second-color);
 }
