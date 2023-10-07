@@ -3,35 +3,18 @@ import { incAmount, decAmount } from "../changeAmount/changeAmount.js";
 import { createPriceBlock } from "./createPriceBlock.js";
 import { renderPricesData } from "../changeAmount/renderPricesData.js";
 
-export const createBasketCardOptions = ({
-	id,
-	price,
-	discount,
-	discountDetails,
-	amount,
-	amountTotal = 0,
-}) => {
+export const createBasketCardOptions = ({ id, price, discount, discountDetails, amount, amountTotal = 0 }) => {
 	const likeIconTemplate = document.querySelector(".like-icon");
 	const bucketIconTemplate = document.querySelector(".bucket-icon");
 
 	const createElementsForActiveCard = () => {
 		// создание блока с ценой для десктопного разрешения
-		const priceBlock = createPriceBlock(
-			"options",
-			id,
-			price,
-			discount,
-			discountDetails,
-			amount
-		);
+		const priceBlock = createPriceBlock("options", id, price, discount, discountDetails, amount);
 		// Создание элементов
 		const counter = createElement("div", "counter"),
 			buttonDec = createElement("button", "counter_operator lead"),
 			counterResult = createElement("div", "counter_result"),
-			buttonInc = createElement(
-				"button",
-				"counter_operator counter_operator--inc  lead"
-			),
+			buttonInc = createElement("button", "counter_operator counter_operator--inc  lead"),
 			pAmount = createElement("p", "caption");
 
 		// Назначение свойств элементам
@@ -63,6 +46,15 @@ export const createBasketCardOptions = ({
 		if (amountTotal <= 2) {
 			pAmount.textContent = `Осталось ${amountTotal} шт.`;
 		}
+		const resizeCard = () => {
+			if (amountTotal > 2 && window.innerWidth >= 1080) {
+				pAmount.classList.add("hide");
+			} else {
+				pAmount.classList.remove("hide");
+			}
+		};
+		window.addEventListener("resize", resizeCard);
+		resizeCard();
 
 		// Добавление элементов
 		counter.append(buttonDec);
@@ -70,26 +62,17 @@ export const createBasketCardOptions = ({
 		counter.append(buttonInc);
 
 		basketCardOptionsAmount.append(counter);
-		if (amountTotal <= 2) {
-			basketCardOptionsAmount.append(pAmount);
-		}
-
+		basketCardOptionsAmount.append(pAmount);
 		basketCardOptionsPriceWrapper.append(priceBlock);
 	};
 
 	// Создание элементов
 	const basketCardOptions = createElement("div", "basket-card_options"),
-		basketCardOptionsAmount = createElement(
-			"div",
-			"basket-card_options-amount"
-		),
+		basketCardOptionsAmount = createElement("div", "basket-card_options-amount"),
 		basketCardOptionsIcons = createElement("div", "basket-card_options-icons"),
 		likeIcon = likeIconTemplate.cloneNode(true),
 		bucketIcon = bucketIconTemplate.cloneNode(true),
-		basketCardOptionsPriceWrapper = createElement(
-			"div",
-			"basket-card_options-price_wrapper"
-		);
+		basketCardOptionsPriceWrapper = createElement("div", "basket-card_options-price_wrapper");
 
 	// Назначение свойств
 	basketCardOptions.id = `basketCardOptions${id}`;

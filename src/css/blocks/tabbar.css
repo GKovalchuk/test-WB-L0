@@ -1,45 +1,45 @@
 .tabbar {
-  display: flex;
-  position: fixed;
-  z-index: 10;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  flex-wrap: wrap;
-  align-content: center;
-  width: 100%;
-  min-width: 2rem;
-  height: var(--height__tabbar);
-  padding-top: 3px;
-  background: var(--white);
+	display: flex;
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	flex-wrap: wrap;
+	align-content: center;
+	width: 100%;
+	min-width: 2rem;
+	height: var(--height__tabbar);
+	background: var(--white);
 }
 
 .tabbar__links {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 13px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 14px 13px;
 }
 
 .tabbar__links svg {
-  fill: var(--not-active-color);
+	fill: var(--not-active-color);
 }
 
 .tabbar__link {
-  display: block;
-  position: relative;
+	display: block;
+	position: relative;
+	line-height: 0;
 }
 
 .tabbar__link--active svg {
-  fill: var(--accent-color);
+	fill: var(--accent-color);
 }
 
 .tabbar__links svg:hover {
-  fill: var(--accent-color);
+	fill: var(--accent-color);
 }
 
 @media (width >= 64rem) {
-  .tabbar {
-    display: none;
-  }
+	.tabbar {
+		display: none;
+	}
 }

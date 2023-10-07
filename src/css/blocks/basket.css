@@ -1,150 +1,148 @@
 :root {
-  --width__sidebar: auto;
+	--width__sidebar: 100%;
 }
 
 .basket {
-  display: flex;
-  position: relative;
-  z-index: 9;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  min-width: 20rem;
-  padding: 0;
-  padding-bottom: 1rem;
-  gap: 1.5rem;
-  background: transparent;
+	display: flex;
+	position: relative;
+	z-index: 9;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	min-width: 20rem;
+	padding: 0;
+	padding-bottom: 1rem;
+	gap: 1.5rem;
+	background: transparent;
 }
 
 .basket__content,
 .basket__sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  height: max-content;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	height: max-content;
 }
 
 .basket h1 {
-  margin: -0.6125rem 1rem 1.125rem;
+	margin: -0.6125rem 1rem 1.125rem;
 }
 
 .basket__sidebar {
-  width: var(--width__sidebar);
-  padding: 0 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
-  border-radius: 1rem 1rem 0 0;
-  background: var(--background-color);
-  gap: 1.5rem;
+	width: var(--width__sidebar);
+	padding: 0 1rem;
+	border-radius: 1rem 1rem 0 0;
+	background: var(--background-color);
+	gap: 1.5rem;
 }
 
 .basket__content_layout {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2rem;
 }
 
 .basket__content_order-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  margin-top: 0.0625rem;
-  gap: 0.6875rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	margin-top: 0.0625rem;
+	gap: 0.6875rem;
 }
 
 .basket__content_supplies--wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 3.0625rem;
-  padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 3.0625rem;
+	padding: 0 1rem;
 }
 
 @media (width >= 64rem) {
-  :root {
-    --width__sidebar: 19rem;
-  }
+	:root {
+		--width__sidebar: 19rem;
+	}
 
-  .basket {
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    padding: 0.625rem 1.5rem 1rem;
-    gap: 2rem;
-  }
+	.basket {
+		flex-flow: row nowrap;
+		align-items: flex-start;
+		padding: 0.625rem 1.5rem 1rem;
+		gap: 2rem;
+	}
 
-  .basket h1 {
-    z-index: 1;
-    margin: 0;
-  }
+	.basket h1 {
+		z-index: 1;
+		margin: 0;
+	}
 
-  .basket__content {
-    flex: 1 0 0;
-    width: calc(100% - var(--width__sidebar) - 3rem);
-    height: 113.75rem;
-    gap: 1.6875rem;
-    padding: 0;
-  }
+	.basket__content {
+		flex: 1 0 0;
+		width: calc(100% - var(--width__sidebar) - 3rem);
+		height: 113.75rem;
+		gap: 1.6875rem;
+		padding: 0;
+	}
 
-  .basket__content_layout {
-    width: 100%;
-    min-width: 40rem;
-    gap: 2.5rem;
-  }
+	.basket__content_layout {
+		width: 100%;
+		min-width: 40rem;
+		gap: 2.5rem;
+	}
 
-  /* .basket__content_layout {
+	/* .basket__content_layout {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 2rem;
 	} */
 
-  .basket__content_supplies--wrapper {
-    width: 100%;
-    min-width: 40rem;
-    gap: 2.5rem;
-    padding: 0;
-  }
+	.basket__content_supplies--wrapper {
+		width: 100%;
+		min-width: 40rem;
+		gap: 2.5rem;
+		padding: 0;
+	}
 
-  .basket__content_order-details {
-    gap: 1rem;
-  }
+	.basket__content_order-details {
+		gap: 1rem;
+	}
 
-  .basket__sidebar {
-    display: flex;
-    position: sticky;
-    z-index: 11;
-    top: calc(var(--height__header) - 0.125rem);
-    flex-direction: column;
-    align-items: center;
-    margin-top: -0.75rem;
-    gap: 1.5rem;
+	.basket__sidebar {
+		display: flex;
+		position: sticky;
+		z-index: 11;
+		top: calc(var(--height__header) - 0.125rem);
+		flex-direction: column;
+		align-items: center;
+		margin-top: -0.75rem;
+		gap: 1.5rem;
 
-    /* на макете блок на 1 px сдвинут. поэтому сделал calc в padding-left ниже */
-    padding: 1rem calc(1.5rem + 1px) 1.5rem 1.5rem;
-    border-radius: 1rem;
-    background: var(--white);
-    box-shadow: var(--main-shadows);
-  }
+		/* на макете блок на 1 px сдвинут. поэтому сделал calc в padding-left ниже */
+		padding: 1rem calc(1.5rem + 1px) 1.5rem 1.5rem;
+		border-radius: 1rem;
+		background: var(--white);
+		box-shadow: var(--main-shadows);
+	}
 }
 
 @media (width >= 87.5rem) {
-  :root {
-    --width__sidebar: 26.8125rem;
-  }
+	:root {
+		--width__sidebar: 26.8125rem;
+	}
 
-  .basket {
-    width: 87.5rem;
-    margin: 0 auto;
-  }
+	.basket {
+		width: 87.5rem;
+		margin: 0 auto;
+	}
 
-  .basket__content_order-details {
-    gap: 1rem;
-  }
+	.basket__content_order-details {
+		gap: 1rem;
+	}
 
-  .basket__sidebar {
-    padding: 1rem 1.5rem 1.5rem;
-  }
+	.basket__sidebar {
+		padding: 1rem 1.5rem 1.5rem;
+	}
 }

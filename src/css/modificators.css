@@ -1,159 +1,163 @@
+.hide {
+	display: none;
+}
+
 .ta-right {
-  text-align: right;
+	text-align: right;
 }
 
 .caption {
-  font-size: var(--font-size_text--s);
-  font-style: normal;
-  font-weight: var(--font-weigth_text--s);
-  line-height: var(--line-height_text--s);
+	font-size: var(--font-size_text--s);
+	font-style: normal;
+	font-weight: var(--font-weigth_text--s);
+	line-height: var(--line-height_text--s);
 }
 
 .caption-bold {
-  font-size: var(--font-size_text--s);
-  font-style: normal;
-  font-weight: 700;
-  line-height: var(--line-height_text--s);
+	font-size: var(--font-size_text--s);
+	font-style: normal;
+	font-weight: 700;
+	line-height: var(--line-height_text--s);
 }
 
 .semibold {
-  font-size: var(--font-size_text--m);
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: -0.021rem;
-  line-height: var(--line-height_text--m);
+	font-size: var(--font-size_text--m);
+	font-style: normal;
+	font-weight: 600;
+	letter-spacing: -0.021rem;
+	line-height: var(--line-height_text--m);
 }
 
 .body-mobile {
-  color: var(--text-color__main--light);
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.25rem;
+	color: var(--text-color__main--light);
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.25rem;
 }
 
 .h2-mobile {
-  margin: 0;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.0125rem;
-  line-height: 1.75rem;
+	margin: 0;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: -0.0125rem;
+	line-height: 1.75rem;
 }
 
 .h3-mobile {
-  margin: 0;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: -0.04rem;
-  line-height: 1.75rem;
+	margin: 0;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 600;
+	letter-spacing: -0.04rem;
+	line-height: 1.75rem;
 }
 
 .lead {
-  font-size: var(--font-size_title--s);
-  font-style: normal;
-  font-weight: var(--font-weigth_text--m);
-  letter-spacing: var(--letter-spacing_title--s);
-  line-height: var(--line-height_text--m);
+	font-size: var(--font-size_title--s);
+	font-style: normal;
+	font-weight: var(--font-weigth_text--m);
+	letter-spacing: var(--letter-spacing_title--s);
+	line-height: var(--line-height_text--m);
 }
 
 /* title--s -> title--m */
 .title--m {
-  font-size: var(--font-size_title--s);
-  font-style: normal;
-  font-weight: var(--font-weigth_title--s);
-  letter-spacing: var(--letter-spacing_title--s);
-  line-height: var(--line-height_title--s);
+	font-size: var(--font-size_title--s);
+	font-style: normal;
+	font-weight: var(--font-weigth_title--s);
+	letter-spacing: var(--letter-spacing_title--s);
+	line-height: var(--line-height_title--s);
 }
 
 .title--s {
-  font-size: var(--font-size_text--m);
-  font-style: normal;
-  font-weight: var(--font-weigth_title--s);
-  line-height: var(--line-height_text--m);
+	font-size: var(--font-size_text--m);
+	font-style: normal;
+	font-weight: var(--font-weigth_title--s);
+	line-height: var(--line-height_text--m);
 }
 
 .text--ac-color {
-  color: var(--accent-color);
+	color: var(--accent-color);
 }
 
 .text--gray-color {
-  color: var(--gray);
+	color: var(--gray);
 }
 
 .text--gray-dark-color {
-  color: var(--gray-dark);
+	color: var(--gray-dark);
 }
 
 .text--second-at-color {
-  color: var(--attention-second-color);
+	color: var(--attention-second-color);
 }
 
 .info_link,
 .info_link:hover,
 .info_link:focus,
 .info_link:active {
-  transition: text-decoration 0.1s linear;
-  letter-spacing: 0.0025rem;
-  text-decoration: underline rgba(0 0 0 / 10%);
-  cursor: pointer;
+	transition: text-decoration 0.1s linear;
+	letter-spacing: 0.0025rem;
+	text-decoration: underline rgba(0 0 0 / 10%);
+	cursor: pointer;
 }
 
 .info_link:hover,
 .info_link:focus,
 .info_link:active {
-  text-decoration-color: var(--black);
+	text-decoration-color: var(--black);
 }
 
 .not-actual::before {
-  content: " ";
-  position: absolute;
-  top: 55%;
-  width: 100%;
-  height: 0.0625rem;
-  background-color: var(--gray);
+	content: " ";
+	position: absolute;
+	top: 55%;
+	width: 100%;
+	height: 0.0625rem;
+	background-color: var(--gray);
 }
 
 @media (width >= 64rem) {
-  /* title--s -> title--m */
-  .title--m {
-    font-size: var(--font-size_title--m);
-    font-style: normal;
-    font-weight: var(--font-weigth_title--m);
-    letter-spacing: var(--letter-spacing_title--m);
-    line-height: var(--line-height_title--m);
-  }
+	/* title--s -> title--m */
+	.title--m {
+		font-size: var(--font-size_title--m);
+		font-style: normal;
+		font-weight: var(--font-weigth_title--m);
+		letter-spacing: var(--letter-spacing_title--m);
+		line-height: var(--line-height_title--m);
+	}
 
-  .title--s {
-    font-size: var(--font-size_title--s);
-    font-style: normal;
-    font-weight: var(--font-weigth_title--s);
-    letter-spacing: var(--letter-spacing_title--s);
-    line-height: var(--line-height_title--s);
-  }
+	.title--s {
+		font-size: var(--font-size_title--s);
+		font-style: normal;
+		font-weight: var(--font-weigth_title--s);
+		letter-spacing: var(--letter-spacing_title--s);
+		line-height: var(--line-height_title--s);
+	}
 
-  .body-mobile {
-    color: var(--text-color__main--light);
-    font-size: inherit;
-    font-style: normal;
-    font-weight: 400;
-    line-height: inherit;
-  }
+	.body-mobile {
+		color: var(--text-color__main--light);
+		font-size: inherit;
+		font-style: normal;
+		font-weight: 400;
+		line-height: inherit;
+	}
 
-  .h3-mobile {
-    font-size: var(--font-size_title--s);
-    font-style: normal;
-    font-weight: var(--font-weigth_title--s);
-    letter-spacing: var(--letter-spacing_title--s);
-    line-height: var(--line-height_title--s);
-  }
+	.h3-mobile {
+		font-size: var(--font-size_title--s);
+		font-style: normal;
+		font-weight: var(--font-weigth_title--s);
+		letter-spacing: var(--letter-spacing_title--s);
+		line-height: var(--line-height_title--s);
+	}
 
-  .h2-mobile {
-    font-size: var(--font-size_title--l);
-    font-style: normal;
-    font-weight: var(--font-weigth_title--l);
-    letter-spacing: var(--letter-spacing_title--l);
-    line-height: var(--line-height_title--l);
-  }
+	.h2-mobile {
+		font-size: var(--font-size_title--l);
+		font-style: normal;
+		font-weight: var(--font-weigth_title--l);
+		letter-spacing: var(--letter-spacing_title--l);
+		line-height: var(--line-height_title--l);
+	}
 }
