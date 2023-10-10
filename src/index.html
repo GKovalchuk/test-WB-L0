@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/head.html',{ "title":"Главная" })
+@@include('html/head.html',{ "title":"Главная" })
 
-	<body>
-		<header>@@include('html/header.html')</header>
-		<div class="wrapper--scroll-area">
-			<main>
-				<form class="basket" id="basketForm">
-					<!-- начало basket__content -->
-					<div class="basket__content">
-						<h1 class="h2-mobile">Корзина</h1>
-						<div class="basket__content_layout">
-							@@include('html/blocks/basketCards.html')
-							<!-- начало деталей заказа -->
-							<div class="basket__content_order-details">
-								<!-- начало доставка -->
-								@@include('html/blocks/delivery.html')
-								<!-- конец доставка -->
-								<!-- начало оплата -->
-								@@include('html/blocks/paymentMethod.html')
-								<!-- конец оплата -->
-								<!-- начало получатель -->
-								@@include('html/blocks/client.html')
-								<!-- конец получатель -->
-							</div>
+<body>
+	<header>@@include('html/header.html')</header>
+	<div class="wrapper--scroll-area">
+		<main>
+			<form class="basket" id="basketForm">
+				<!-- начало basket__content -->
+				<div class="basket__content">
+					<h1 class="h2-mobile">Корзина</h1>
+					<div class="basket__content_layout">
+						<!-- начало карточек товаров -->
+						@@include('html/blocks/basketCards.html')
+						<!-- конец карточек товаров -->
+						<!-- начало деталей заказа -->
+						@@include('html/blocks/orderDetails.html')
+						<!-- конец деталей заказа -->
+					</div>
+				</div>
+				<!-- конец basket__content -->
 
-							<!-- конец деталей заказа -->
-						</div>
-					</div>
-					@@include('html/components/iconsForJs.html')
-					<!-- конец basket__content -->
-					<!-- начало basket__sidebar -->
-					<div class="basket__sidebar">
-						@@include('html/blocks/orderSum.html')
-						@@include('html/components/submit.html')
-					</div>
-					<!-- конец basket-sidebar -->
-				</form>
-				<!-- конец basket-wrapper -->
-			</main>
-			<!-- конец main -->
-			<footer>@@include('html/footer.html')</footer>
-		</div>
-		<!-- конец wrapper--scroll-area -->
-		@@include('html/tabbar.html') @@include('html/blocks/paymentModal.html')
-		@@include('html/blocks/deliveryModal.html')
-		<script type="module" src="js/app.min.js"></script>
-	</body>
+				<!-- служебный блок -->
+				@@include('html/components/iconsForJs.html')
+				<!-- конец служебного блока -->
+
+				<!-- начало basket__sidebar -->
+				<div class="basket__sidebar">
+					@@include('html/blocks/orderSum.html')
+				</div>
+				<!-- конец basket-sidebar -->
+			</form>
+			<!-- конец basket-wrapper -->
+		</main>
+		<!-- конец main -->
+		<footer>@@include('html/footer.html')</footer>
+	</div>
+	<!-- конец wrapper--scroll-area -->
+	@@include('html/tabbar.html')
+	<!-- начало модальные окна -->
+	@@include('html/blocks/paymentModal.html')
+	@@include('html/blocks/deliveryModal.html')
+	<!-- конец модальные окна -->
+	<script type="module" src="js/app.min.js"></script>
+</body>
+
 </html>

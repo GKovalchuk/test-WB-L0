@@ -1,0 +1,117 @@
+<div class="basket__content_order-details">
+	<div class="white-section">
+		<div class="white-section_title">
+			<h3 class="title--m">Способ доставки</h3>
+			<button class="btn-text" type="button" data-modal="deliveryModal">
+				<h4>Изменить</h4>
+			</button>
+		</div>
+		<div class="delivery">
+			<div class="delivery_address-wrapper">
+				<div class="delivery_address">
+					<p class="semibold delivery_address--method">Пункт выдачи</p>
+					<p class="delivery_address--text">
+						Бишкек, улица Ахматбека Суюмбаева, 12/1
+					</p>
+				</div>
+				<div class="delivery_schedule">
+					@@include('../components/cardRating.html')
+				</div>
+				<div class="delivery_cost">
+					<p class="semibold">Стоимость доставки</p>
+					<p>Бесплатно</p>
+				</div>
+			</div>
+			<div class="delivery_dates">
+				<div class="delivery_date">
+					<p class="semibold">5—6 февраля</p>
+					<div class="delivery_date-list">
+						<div class="delivery_item-wrapper">
+							<img src="./files/img/supplies/1-x2.png" alt="" />
+						</div>
+						<div class="delivery_item-wrapper">
+							<div class="notification">
+								<p>184</p>
+							</div>
+							<img src="./files/img/supplies/2-x2.png" alt="" />
+						</div>
+						<div class="delivery_item-wrapper">
+							<div class="notification">
+								<p>2</p>
+							</div>
+							<img src="./files/img/supplies/3-x2.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="delivery_date">
+					<p class="semibold">7—8 февраля</p>
+					<div class="delivery_date-list">
+						<div class="delivery_item-wrapper">
+							<div class="notification">
+								<p>16</p>
+							</div>
+							<img src="./files/img/supplies/2-x2.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="delivery_refund">
+			<div class="refund">
+				<img src="./files/img/price_shipping.svg" alt="" />
+				<p class="caption">
+					Обратная доставка товаров на склад при отказе —
+					<mark id="refundCost"
+						class="caption info_spoiler text--second-at-color">
+						бесплатно
+					</mark>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="white-section">
+		<div class="white-section_title">
+			<h3 class="title--m">Способ оплаты</h3>
+			<button class="btn-text" type="button" data-modal="paymentModal">
+				<h4>Изменить</h4>
+			</button>
+		</div>
+		<div class="payment-method">
+			@@include('../components/card.html')
+			<p class="caption text--gray-dark-color">Спишем оплату с карты при
+				получении</p>
+		</div>
+	</div>
+	<div class="white-section">
+		<div class="white-section_title">
+			<h3 class="title--m">Получатель</h3>
+		</div>
+		<div class="client">
+			<div class="client_field--name">
+				<input name="firstName" id="clientsName" type="text"
+					class="client_input" />
+				<label for="clientsName" class="client_label">Имя</label>
+			</div>
+			<div class="client_field--name">
+				<input name="lastName" id="clientsLastName" type="text"
+					class="client_input" />
+				<label for="clientsLastName" class="client_label">Фамилия</label>
+			</div>
+			<div class="client_field">
+				<input name="email" id="clientsEmail" type="text"
+					class="client_input" />
+				<label for="clientsEmail" class="client_label">Электронная почта</label>
+			</div>
+			<div class="client_field">
+				<input name="phone" type="tel" id="clientsPhone" class="client_input" />
+				<label for="clientsPhone" class="client_label">Телефон</label>
+			</div>
+			<div class="client_field">
+				<input name="inn" id="clientsInn" type="text" class="client_input" />
+				<label for="clientsInn" class="client_label">ИНН</label>
+				<p id="clientsInnError" class="client_note">Для таможенного оформления
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
