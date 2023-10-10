@@ -28,7 +28,6 @@ export function modalsListener() {
 	modalClose.forEach((item) => {
 		item.addEventListener("click", (event) => {
 			let currentModal = event.currentTarget.closest(".modal");
-
 			closeModal(currentModal);
 		});
 	});
@@ -36,18 +35,19 @@ export function modalsListener() {
 	modal.forEach((item) => {
 		item.addEventListener("click", (event) => {
 			let currentModal = event.currentTarget;
-
 			closeModal(currentModal);
 		});
 	});
 
-	function closeModal(currentModal) {
-		let modalContent = currentModal.querySelector(".modal__content");
-		modalContent.removeAttribute("style");
 
-		setTimeout(() => {
-			currentModal.classList.remove("show");
-			body.classList.remove("no-scroll");
-		}, 200);
-	}
+}
+
+export	function closeModal(currentModal) {
+	let modalContent = currentModal.querySelector(".modal__content");
+	modalContent.removeAttribute("style");
+
+	setTimeout(() => {
+		currentModal.classList.remove("show");
+		body.classList.remove("no-scroll");
+	}, 200);
 }

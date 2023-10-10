@@ -35,8 +35,3 @@ modalsListener();
 collapsingSupplies();
 
 window.addEventListener("DOMContentLoaded", renderPricesData);
-
-// правка верстки на промежуточных разрешениях
-// изменение чисел в уведомлениях
-// раскрытие выпадающего списка
-// поведение инпутов по tab и enter
