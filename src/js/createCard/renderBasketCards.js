@@ -1,5 +1,7 @@
 import { createCard } from "./createCard.js";
 import { outOfStockCounters } from "../outOfStockCounters.js";
+import { setNotificationCounter } from "../notifications/notifications.js";
+
 let outOfStockCounter = 0;
 
 export const renderBasketCards = (data) => {
@@ -7,6 +9,7 @@ export const renderBasketCards = (data) => {
 	let root;
 	if (data.amountTotal > 0) {
 		root = document.getElementById("suppliesCards");
+		setNotificationCounter('suppliesInStock', 1);
 	} else {
 		outOfStockCounter += 1;
 		root = document.getElementById("suppliesCardsOutOfStock");

@@ -1,7 +1,9 @@
 const likeCounter = document.getElementById("likeCounter");
+const suppliesInStockCounter = document.getElementById("suppliesInStockCounter");
 
 const notificationCounters = {
 	likes: likeCounter,
+	suppliesInStock: suppliesInStockCounter,
 }
 
 const getCounterNode = (counter) => notificationCounters[counter];

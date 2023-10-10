@@ -8,6 +8,7 @@ export const createBasketCardOptions = ({ id, price, discount, discountDetails, 
 	const likeIconTemplate = document.querySelector(".like-icon");
 	const bucketIconTemplate = document.querySelector(".bucket-icon");
 
+	// создание элементов для активной карточки
 	const createElementsForActiveCard = () => {
 		// создание блока с ценой для десктопного разрешения
 		const priceBlock = createPriceBlock("options", id, price, discount, discountDetails, amount);
@@ -84,6 +85,8 @@ export const createBasketCardOptions = ({ id, price, discount, discountDetails, 
 
 	likeIcon.addEventListener("click", () => {
 		likeIconActive.classList.toggle("hide");
+
+		// изменение счетчика в уведомлениях
 		if (likeIconActive.classList.contains('hide')){
 			setNotificationCounter('likes', -1);
 		} else {
@@ -93,9 +96,15 @@ export const createBasketCardOptions = ({ id, price, discount, discountDetails, 
 	bucketIcon.addEventListener("click", () => {
 		const basketCard = document.getElementById(`basketCard${id}`);
 		basketCard.remove();
+
+		// изменение счетчика в уведомлениях (только для товаров в наличии)
+		if (amountTotal > 0) setNotificationCounter('suppliesInStock', -1);
+
 		renderPricesData();
 	});
 
+
+		// создание элементов для активной карточки
 	if (amountTotal > 0) {
 		createElementsForActiveCard();
 	}
