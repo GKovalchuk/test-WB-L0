@@ -3,6 +3,7 @@ import { incAmount, decAmount } from "../changeAmount/changeAmount.js";
 import { createPriceBlock } from "./createPriceBlock.js";
 import { renderPricesData } from "../changeAmount/renderPricesData.js";
 import { setNotificationCounter, renderAllNotificationCounters } from "../notifications/notifications.js";
+import { setTextOutOfStockCounters } from "../form/supplies.js";
 
 export const createBasketCardOptions = ({ id, price, discount, discountDetails, amount, amountTotal = 0 }) => {
 	const likeIconTemplate = document.querySelector(".like-icon");
@@ -98,8 +99,10 @@ export const createBasketCardOptions = ({ id, price, discount, discountDetails, 
 		const basketCard = document.getElementById(`basketCard${id}`);
 		basketCard.remove();
 
-		// изменение счетчика в уведомлениях (только для товаров в наличии)
+		// изменение счетчика в уведомлениях (для товаров в наличии)
 		if (amountTotal > 0) setNotificationCounter('suppliesInStock', -1);
+		// изменение счетчика в уведомлениях (для отсутствующих товаров)
+		if (amountTotal <= 0) setTextOutOfStockCounters(-1);
 
 		renderPricesData();
 	});

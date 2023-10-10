@@ -1,5 +1,6 @@
 import { createMaskForNumbers, setDeclension } from "../helpers.js";
 import { formData } from "../app.js";
+import { getCollapseTextData } from "../form/supplies.js";
 
 // получение количества нод, которые нужно обойти
 const getIds = () => {
@@ -59,6 +60,8 @@ export const renderPricesData = () => {
 
 	const sumPrices = findSumPrices(ids);
 	const priceFull = findPriceFull(ids);
+
+	getCollapseTextData(sumPrices, ids.length);
 
 	renderTotalPrices(sumPrices, priceFull, ids.length);
 

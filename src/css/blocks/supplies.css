@@ -39,10 +39,16 @@
 .supplies__cards,
 .supplies__cards--out-of-stock {
   display: flex;
+	height: min-content;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
   align-self: stretch;
+	transition: height 2s ease-in;
+}
+
+.supplies__card--collapsed {
+  height: 0;
 }
 
 .supplies--out-of-stock img {

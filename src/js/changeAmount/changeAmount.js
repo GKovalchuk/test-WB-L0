@@ -1,4 +1,4 @@
-import { localData, formData } from "../app.js";
+import { localData } from "../app.js";
 import { createPriceBlock } from "../createCard/createPriceBlock.js";
 import { createBasketCardOptions } from "../createCard/createBasketCardOptions.js";
 import { renderPricesData } from "../changeAmount/renderPricesData.js";
@@ -45,26 +45,3 @@ const renderNewElementsInCards = (supId, curData) => {
 	basketCard.append(newBasketCardOptions);
 };
 
-// отправка команды на перерисовку элементов в поле итогов
-const renderNewElementsInSummary = (supId, curData) => {
-	// const basketCard = document.getElementById(`basketCard${supId}`);
-	// const priceWrapper = document.getElementById(`priceWrapper${supId}`);
-	// const basketCardOptions = document.getElementById(
-	// 	`basketCardOptions${supId}`
-	// );
-	// // если мобильное разрешение
-	// if (priceWrapper.classList.contains("price_wrapper--desc")) {
-	// 	const newPriceWrapper = createPriceBlock(
-	// 		"desc",
-	// 		supId,
-	// 		curData.price,
-	// 		curData.discount,
-	// 		curData.discountDetails,
-	// 		curData.amount
-	// 	);
-	// 	priceWrapper.replaceWith(newPriceWrapper);
-	// }
-	// basketCardOptions.remove();
-	// const newBasketCardOptions = createBasketCardOptions(curData);
-	// basketCard.append(newBasketCardOptions);
-};

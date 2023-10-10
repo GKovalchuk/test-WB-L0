@@ -1,8 +1,6 @@
 import { createCard } from "./createCard.js";
-import { outOfStockCounters } from "../outOfStockCounters.js";
-import { setNotificationCounter, renderAllNotificationCounters } from "../notifications/notifications.js";
-
-let outOfStockCounter = 0;
+import { setTextOutOfStockCounters } from "../form/supplies.js";
+import { setNotificationCounter } from "../notifications/notifications.js";
 
 export const renderBasketCards = (data) => {
 	const card = document.createDocumentFragment();
@@ -11,9 +9,8 @@ export const renderBasketCards = (data) => {
 		root = document.getElementById("suppliesCards");
 		setNotificationCounter('suppliesInStock', 1);
 	} else {
-		outOfStockCounter += 1;
 		root = document.getElementById("suppliesCardsOutOfStock");
-		outOfStockCounters(outOfStockCounter);
+		setTextOutOfStockCounters(1);
 	}
 	card.append(createCard(data));
 	root.append(card);

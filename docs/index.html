@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Главная</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20231010153314" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20231010193520" />
 </head>
 
 
@@ -64,17 +64,17 @@
 	<div class="basket__content_supplies">
 		<div class="supplies">
 			<div class="supplies__controls">
-				<input
-					id="takeAllSupplies"
-					name="takeAllSupplies"
-					type="checkbox"
+				<input id="takeAllSupplies" name="takeAllSupplies" type="checkbox"
 					class="checkbox" />
-				<label
+				<label id="suppliesControlsLabel"
 					class="supplies__controls_checkbox checkbox_label"
 					for="takeAllSupplies">
 					<p>Выбрать все</p>
 				</label>
-				<button class="btn-collapse btn-expand">
+				<p id="suppliesControlsText" class="semibold supplies__controls_p hide">
+				</p>
+				<button type="button" id="btnCollapseInStock"
+					class="btn-collapse btn-expand">
 					<img src="./files/img/conrol_arrow.svg" alt="" />
 				</button>
 			</div>
@@ -85,18 +85,17 @@
 		<div class="supplies supplies--out-of-stock">
 			<div class="supplies__controls">
 				<p id="outOfStockCounters" class="semibold supplies__controls_p"></p>
-				<button class="btn-collapse btn-expand--active">
+				<button type="button" id="btnCollapseOutOfStock"
+					class="btn-collapse btn-expand">
 					<img src="./files/img/conrol_arrow.svg" alt="" />
 				</button>
 			</div>
-			<div
-				id="suppliesCardsOutOfStock"
+			<div id="suppliesCardsOutOfStock"
 				class="supplies__cards supplies__cards--out-of-stock"></div>
 		</div>
 	</div>
 </div>
 <!-- конец карточек товаров -->
-
 							<!-- начало деталей заказа -->
 							<div class="basket__content_order-details">
 								<!-- начало доставка -->
@@ -875,6 +874,6 @@
 	</div>
 </div>
 
-		<script type="module" src="js/app.min.js?_v=20231010153314"></script>
+		<script type="module" src="js/app.min.js?_v=20231010193520"></script>
 	</body>
 </html>
