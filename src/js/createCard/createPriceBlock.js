@@ -1,4 +1,4 @@
-import { createElement } from "../createElement.js";
+import { createElement } from "../helpers.js";
 import { createMaskForNumbers } from "../helpers.js";
 
 export const createPriceBlock = (

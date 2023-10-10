@@ -1,6 +1,6 @@
 import { createBasketCardDescription } from "./createBasketCardDescription.js";
 import { createBasketCardOptions } from "./createBasketCardOptions.js";
-import { createElement } from "../createElement.js";
+import { createElement } from "../helpers.js";
 
 export const createCard = (data) => {
 	const id = data.id;

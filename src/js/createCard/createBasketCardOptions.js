@@ -1,7 +1,8 @@
-import { createElement } from "../createElement.js";
+import { createElement } from "../helpers.js";
 import { incAmount, decAmount } from "../changeAmount/changeAmount.js";
 import { createPriceBlock } from "./createPriceBlock.js";
 import { renderPricesData } from "../changeAmount/renderPricesData.js";
+import { setNotificationCounter } from "../notifications/notifications.js";
 
 export const createBasketCardOptions = ({ id, price, discount, discountDetails, amount, amountTotal = 0 }) => {
 	const likeIconTemplate = document.querySelector(".like-icon");
@@ -47,7 +48,7 @@ export const createBasketCardOptions = ({ id, price, discount, discountDetails, 
 			pAmount.textContent = `Осталось ${amountTotal} шт.`;
 		}
 		const resizeCard = () => {
-			if (amountTotal > 2 && window.innerWidth >= 1080) {
+			if (amountTotal > 2 && window.innerWidth >= 1024) {
 				pAmount.classList.add("hide");
 			} else {
 				pAmount.classList.remove("hide");
@@ -71,6 +72,7 @@ export const createBasketCardOptions = ({ id, price, discount, discountDetails, 
 		basketCardOptionsAmount = createElement("div", "basket-card_options-amount"),
 		basketCardOptionsIcons = createElement("div", "basket-card_options-icons"),
 		likeIcon = likeIconTemplate.cloneNode(true),
+		likeIconActive = likeIcon.querySelector(".like-icon-active"),
 		bucketIcon = bucketIconTemplate.cloneNode(true),
 		basketCardOptionsPriceWrapper = createElement("div", "basket-card_options-price_wrapper");
 
@@ -78,8 +80,16 @@ export const createBasketCardOptions = ({ id, price, discount, discountDetails, 
 	basketCardOptions.id = `basketCardOptions${id}`;
 
 	likeIcon.id = `likeIcon${id}`;
-
 	bucketIcon.id = `bucketIcon${id}`;
+
+	likeIcon.addEventListener("click", () => {
+		likeIconActive.classList.toggle("hide");
+		if (likeIconActive.classList.contains('hide')){
+			setNotificationCounter('likes', -1);
+		} else {
+			setNotificationCounter('likes', 1);
+		}
+	});
 	bucketIcon.addEventListener("click", () => {
 		const basketCard = document.getElementById(`basketCard${id}`);
 		basketCard.remove();

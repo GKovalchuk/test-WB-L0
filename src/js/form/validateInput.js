@@ -1,4 +1,4 @@
-import { createElement } from "../createElement.js";
+import { createElement } from "../helpers.js";
 
 const errors = {
 	email: "Проверьте адрес электронной почты",

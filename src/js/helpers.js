@@ -27,3 +27,9 @@ export function cutString(str, sym) {
 	}
 	return str;
 }
+
+export const createElement = (elem, classes) => {
+	const newElem = document.createElement(elem);
+	if (classes) newElem.className = classes;
+	return newElem;
+};
