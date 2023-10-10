@@ -24,7 +24,7 @@ export function formatForPhone(e) {
 			default:
 				e.target.value = value;
 		}
-	} else if (key == "Backspace" || key == "Delete") {
+	} else if (key == "Backspace" || key == "Delete" || key == "Tab" || key == "Enter") {
 		e.target.value = value;
 	} else {
 		e.preventDefault();

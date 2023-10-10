@@ -1,3 +1,4 @@
+import { renderPricesData } from '../changeAmount/renderPricesData.js';
 import { createMaskForNumbers, setDeclension } from "../helpers.js";
 
 const btnCollapseInStock = document.getElementById('btnCollapseInStock');
@@ -53,4 +54,33 @@ export const collapsingSupplies = () => {
 
 		setTextOutOfStockCounters();
 	});
+}
+
+export const chooseSupplies = () => {
+	suppliesCards.querySelectorAll(".checkbox").forEach((cardsCheckbox) => {
+		cardsCheckbox.onclick = ({target}) => {
+			target.closest('.basket-card').classList.toggle('card-choosed');
+			renderPricesData();
+		}
+	})
+}
+
+export const checkAllSupplies = () => {
+	const switchChecked = () => {
+		if (takeAllSupplies.checked === true) {
+			suppliesCards.querySelectorAll(".checkbox").forEach((cardsCheckbox) => {
+				cardsCheckbox.checked = true;
+				cardsCheckbox.closest('.basket-card').classList.add('card-choosed');
+			});
+		} else {
+			suppliesCards.querySelectorAll(".checkbox").forEach((cardsCheckbox) => {
+				cardsCheckbox.checked = false;
+				cardsCheckbox.closest('.basket-card').classList.remove('card-choosed');
+			});	
+		}
+		renderPricesData();
+	}
+
+	takeAllSupplies.onclick = switchChecked;
+	switchChecked();
 }

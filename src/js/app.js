@@ -7,7 +7,7 @@ import { modalsListener } from "./modal/modal.js";
 import { renderPricesData } from "./changeAmount/renderPricesData.js";
 import { deliveryFormLogic } from "./modal/modalDeliveryForm.js";
 import { renderAllNotificationCounters } from "./notifications/notifications.js";
-import { collapsingSupplies } from "./form/supplies.js";
+import { collapsingSupplies, chooseSupplies, checkAllSupplies } from "./form/supplies.js";
 
 export const localData = [...data];
 export const formData = {
@@ -18,7 +18,7 @@ export const formData = {
 	paymentOption: "mir",
 	client: {},
 	priceSum: 2101063,
-	amountSup: 4,
+	amount: 203,
 	discountSum: 200985,
 	instansePayment: false,
 };
@@ -34,5 +34,7 @@ deliveryFormLogic();
 formLogic();
 modalsListener();
 collapsingSupplies();
+chooseSupplies();
+checkAllSupplies();
 
-window.addEventListener("DOMContentLoaded", renderPricesData);
+window.addEventListener("DOMContentLoaded", () => renderPricesData());

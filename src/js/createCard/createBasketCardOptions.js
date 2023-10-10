@@ -5,6 +5,8 @@ import { renderPricesData } from "../changeAmount/renderPricesData.js";
 import { setNotificationCounter, renderAllNotificationCounters } from "../notifications/notifications.js";
 import { setTextOutOfStockCounters } from "../form/supplies.js";
 
+let favouritesSupplies = [];
+
 export const createBasketCardOptions = ({ id, price, discount, discountDetails, amount, amountTotal = 0 }) => {
 	const likeIconTemplate = document.querySelector(".like-icon");
 	const bucketIconTemplate = document.querySelector(".bucket-icon");
@@ -84,17 +86,25 @@ export const createBasketCardOptions = ({ id, price, discount, discountDetails, 
 
 	likeIcon.id = `likeIcon${id}`;
 	bucketIcon.id = `bucketIcon${id}`;
+	likeIconActive.classList.add('hide');
 
-	likeIcon.addEventListener("click", () => {
+	// снимаем класс, если он ранее был снят
+	if (favouritesSupplies.includes(likeIcon.id) === true) {
+		likeIconActive.classList.remove("hide");
+	}
+
+	likeIcon.onclick = () => {
 		likeIconActive.classList.toggle("hide");
-
+		
 		// изменение счетчика в уведомлениях
 		if (likeIconActive.classList.contains('hide')){
 			setNotificationCounter('likes', -1);
+			favouritesSupplies = favouritesSupplies.filter((item) => item != likeIcon.id);
 		} else {
 			setNotificationCounter('likes', 1);
+			favouritesSupplies.push(likeIcon.id);
 		}
-	});
+	};
 	bucketIcon.addEventListener("click", () => {
 		const basketCard = document.getElementById(`basketCard${id}`);
 		basketCard.remove();

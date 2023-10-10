@@ -20,9 +20,22 @@ const getIds = () => {
 const findSumPrices = (ids) =>
 	ids.reduce((acc, id) => {
 		const elem = document.getElementById(`price${id}`);
-		let text = elem.textContent;
-		text = text.replace(/ /g, "");
-		acc += Number(text);
+		if (elem.closest('.basket-card').classList.contains('card-choosed')) {
+			let text = elem.textContent;
+			text = text.replace(/ /g, "");
+			acc += Number(text);
+		}
+		return acc;
+	}, 0);
+
+// получение количества товаров
+const findAmount = (ids) =>
+	ids.reduce((acc, id) => {
+		const elem = document.getElementById(`counterResult${id}`);
+		if (elem.closest('.basket-card').classList.contains('card-choosed')) {
+			let text = elem.textContent;
+			acc += Number(text);
+		}
 		return acc;
 	}, 0);
 
@@ -30,10 +43,12 @@ const findSumPrices = (ids) =>
 const findPriceFull = (ids) =>
 	ids.reduce((acc, id) => {
 		const elem = document.getElementById(`discount${id}`);
-		let text = elem.textContent;
-		text = text.slice(0, text.indexOf(" сом"));
-		text = text.replace(/ /g, "");
-		acc += Number(text);
+		if (elem.closest('.basket-card').classList.contains('card-choosed')) {
+			let text = elem.textContent;
+			text = text.slice(0, text.indexOf(" сом"));
+			text = text.replace(/ /g, "");
+			acc += Number(text);
+		}
 		return acc;
 	}, 0);
 
@@ -45,10 +60,19 @@ const renderTotalPrices = (sumPrices, priceFull, sup) => {
 	const discountTotalNode = document.getElementById("priceDiscount");
 	priceTotalNode.innerHTML = createMaskForNumbers(sumPrices, " ");
 	priceFullNode.innerHTML = `${createMaskForNumbers(priceFull, " ")} сом`;
-	discountTotalNode.innerHTML = `−${createMaskForNumbers(
-		priceFull - sumPrices,
-		" "
-	)} сом`;
+	const discountTotal = priceFull - sumPrices;
+	if (discountTotal < 1) {
+		discountTotalNode.innerHTML = `${createMaskForNumbers(
+			discountTotal,
+			" "
+		)} сом`;
+	} else {
+		discountTotalNode.innerHTML = `−${createMaskForNumbers(
+			discountTotal,
+			" "
+		)} сом`;
+	}
+
 	totalSupNode.innerHTML = `${createMaskForNumbers(sup)} ${setDeclension(sup, [
 		"товар",
 		"товара",
@@ -61,13 +85,14 @@ export const renderPricesData = () => {
 
 	const sumPrices = findSumPrices(ids);
 	const priceFull = findPriceFull(ids);
+	const amount = findAmount(ids);
 
 	// Сборка данных о товарах и ценах в formData
 	formData.priceSum = sumPrices;
-	formData.amountSup = ids.length;
+	formData.amount = amount;
 	formData.discountSum = priceFull - sumPrices;
 
-	getCollapseTextData(sumPrices, ids.length);
-	renderTotalPrices(sumPrices, priceFull, ids.length);
+	getCollapseTextData(sumPrices, amount);
+	renderTotalPrices(sumPrices, priceFull, amount);
 	setPaymentCheckboxListener();
 };
