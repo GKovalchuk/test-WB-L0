@@ -1,0 +1,166 @@
+.client,
+.client_field,
+.client_input,
+.client_label,
+.client_field--name {
+	width: 100%;
+	-webkit-transition: color 0.1s linear;
+	transition: color 0.1s linear;
+	color: var(--gray);
+}
+
+.client {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
+	-ms-grid-row-align: start;
+	    align-self: start;
+	width: 100%;
+	max-width: 43.75rem;
+	margin-bottom: 0.125rem;
+	gap: 1rem;
+}
+
+.client_field,
+.client_field--name {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-ms-flex-item-align: stretch;
+	    -ms-grid-row-align: stretch;
+	    align-self: stretch;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	margin-bottom: 0.125rem;
+	padding: 1rem 0;
+	gap: 0.1875rem;
+}
+
+.client_input {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0;
+	border: none;
+	line-height: 1.375rem;
+	outline: transparent;
+}
+
+.client_label {
+	position: absolute;
+	top: 0.875rem;
+	left: -0.0625rem;
+	-webkit-transition: color 0.1s linear, top 0.1s linear, font-size 0.1s linear;
+	transition: color 0.1s linear, top 0.1s linear, font-size 0.1s linear;
+}
+
+.client_field::before,
+.client_field--name::before {
+	content: " ";
+	position: absolute;
+	top: 78%;
+	left: 0;
+	width: 100%;
+	height: 0.0625rem;
+	background-color: rgba(0 0 0 / 10%);
+}
+
+.client_note,
+.client_error {
+	position: absolute;
+	top: 85%;
+	color: var(--black);
+	font-size: 0.75rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 0.875rem;
+}
+
+/* смещение label */
+.client_input:active + .client_label,
+.client_input:focus + .client_label,
+.client_input:hover + .client_label,
+.client_input--has-value .client_label,
+.client_field--empty .client_label {
+	top: -0.1875rem;
+	font-size: var(--font-size_text--s);
+	font-style: normal;
+	font-weight: var(--font-weigth_text--s);
+	line-height: var(--line-height_text--s);
+}
+
+/* ошибки */
+.client_input--empty .client_input::-webkit-input-placeholder {
+	color: var(--attention-color);
+}
+.client_input--empty .client_input::-moz-placeholder {
+	color: var(--attention-color);
+}
+.client_input--empty .client_input:-ms-input-placeholder {
+	color: var(--attention-color);
+}
+.client_input--empty .client_input::-ms-input-placeholder {
+	color: var(--attention-color);
+}
+.client_error,
+.client_input--error,
+.client_field--empty .client_label,
+.client_input--empty .client_input::placeholder {
+	color: var(--attention-color);
+}
+
+.client_input--has-value .client_field::before,
+.client_input--has-value .client_field--name::before {
+	background-color: var(--attention-color);
+}
+
+@media (width >= 64rem) {
+	.client {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: (1fr)[6];
+		grid-template-columns: repeat(6, 1fr);
+		row-gap: 0.5rem;
+		-webkit-column-gap: 1.25rem;
+		   -moz-column-gap: 1.25rem;
+		        column-gap: 1.25rem;
+	}
+
+	.client_field--name {
+		-ms-grid-column-span: 3;
+		grid-column: span 3;
+	}
+
+	.client_field {
+		-ms-grid-column-span: 2;
+		grid-column: span 2;
+	}
+
+	.client_field,
+	.client_field--name {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-item-align: stretch;
+		    -ms-grid-row-align: stretch;
+		    align-self: stretch;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		padding: 1.125rem 0 1rem;
+		gap: 0;
+	}
+}

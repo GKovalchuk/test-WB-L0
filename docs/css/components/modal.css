@@ -1,0 +1,167 @@
+:root {
+  --z-index__modal: 100;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: var(--z-index__modal);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(5 0 10 / 30%);
+  inset: 0;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  -webkit-transform: translateX(-5rem);
+      -ms-transform: translateX(-5rem);
+          transform: translateX(-5rem);
+  -webkit-transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  opacity: 0;
+  background-color: var(--white);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 0.0625rem;
+  margin-bottom: 0.825rem;
+}
+
+.modal__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  margin: 0.25rem -0.25rem 0 0;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  opacity: 1;
+}
+
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.modal__radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.modal__radio-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+  gap: 0.75rem;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.modal__radio-wrapper p {
+  margin-left: 0.25rem;
+}
+
+.modal__radio-wrapper .card_icon {
+  margin: 0;
+}
+
+.modal__button .btn-main {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+@media (width >= 64rem) {
+  .modal__content {
+    width: auto;
+    min-width: 25rem;
+    height: 25.5rem;
+    margin-top: -0.75rem;
+    margin-left: -0.325rem;
+    padding: 1rem 1.5rem 1.5rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0 0 0 / 20%);
+            box-shadow: 0 4px 10px 0 rgba(0 0 0 / 20%);
+  }
+
+  .modal__title {
+    margin-top: -0.0625rem;
+  }
+
+  .modal__button .btn-main {
+    width: auto;
+  }
+}

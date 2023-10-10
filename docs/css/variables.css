@@ -1,0 +1,76 @@
+:root {
+  --main-color: #6725a8;
+  --background-color: #f6f6fa;
+  --accent-color: #cb11ab;
+  --accent-color--transparent: #cb11ab20;
+  --attention-color: #f55123;
+  --attention-color--dark: #ff3b30;
+  --attention-second-color: #0cb477;
+  --not-active-color: #ccc;
+  --white: #fff;
+  --gray: #a0a0a4;
+  --gray-dark: #9797af;
+  --smoky: #f6f6fa;
+  --smoky--dark: #f0ecf4;
+  --black: #000;
+  --text-color__main--light: #000;
+  --text-color__main--dark: #fff;
+  --font-family--main: "Segoe UI";
+  --main-shadows: 0 0 1px rgba(0 0 0 / 30%), 0 2px 10px 0 rgba(0 0 0 / 15%);
+  --dropdown-shadows: 0 0 1px 0 rgba(0 0 0 / 15%), 0 2px 10px 0 rgba(0 0 0 / 15%);
+
+  /* content-area */
+  --content-area-margin: 1rem;
+
+  /* title large size */
+  --font-size_title--l: 1.75rem;
+  --line-height_title--l: 2.25rem;
+  --font-weigth_title--l: 700;
+  --letter-spacing_title--l: -0.0175rem;
+
+  /* title medium size */
+  --font-size_title--m: 1.5rem;
+  --line-height_title--m: 2rem;
+  --font-weigth_title--m: 700;
+  --letter-spacing_title--m: -0.015rem;
+
+  /* title small size */
+  --font-size_title--s: 1.25rem;
+  --line-height_title--s: 1.75rem;
+  --font-weigth_title--s: 700;
+  --letter-spacing_title--s: -0.0125rem;
+
+  /* text medium size */
+  --font-size_text--m: 1rem;
+  --line-height_text--m: 1.5rem;
+  --font-weigth_text--m: 400;
+
+  /* text small size */
+  --font-size_text--s: 0.8125rem;
+  --line-height_text--s: 1rem;
+  --font-weigth_text--s: 400;
+
+  /* header */
+  --height__header: 5rem;
+
+  /* footer */
+  --height__footer: 4rem;
+
+  /* tabbar */
+  --height__tabbar: 3.5rem;
+
+  /* текст плавает на 1 пиксель в некоторых блоках
+	не знаю, насколько это критично. ввел поправку
+	при ее изменении высота блоков не меняется */
+  --text-height-adjustment: -1px;
+}
+
+@media (width >= 64rem) {
+  :root {
+    /* header */
+    --height__header: 7rem;
+
+    /* tabbar */
+    --height__tabbar: 0;
+  }
+}
