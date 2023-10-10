@@ -1,6 +1,6 @@
 import { createCard } from "./createCard.js";
 import { outOfStockCounters } from "../outOfStockCounters.js";
-import { setNotificationCounter } from "../notifications/notifications.js";
+import { setNotificationCounter, renderAllNotificationCounters } from "../notifications/notifications.js";
 
 let outOfStockCounter = 0;
 

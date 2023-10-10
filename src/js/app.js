@@ -25,12 +25,12 @@ export const render = () => {
 };
 
 render();
+renderAllNotificationCounters();
 createInputListeners();
 paymentFormLogic();
 deliveryFormLogic();
 formLogic();
 modalsListener();
-renderAllNotificationCounters();
 
 window.addEventListener("DOMContentLoaded", renderPricesData);
 

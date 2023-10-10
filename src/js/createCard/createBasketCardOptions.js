@@ -2,7 +2,7 @@ import { createElement } from "../helpers.js";
 import { incAmount, decAmount } from "../changeAmount/changeAmount.js";
 import { createPriceBlock } from "./createPriceBlock.js";
 import { renderPricesData } from "../changeAmount/renderPricesData.js";
-import { setNotificationCounter } from "../notifications/notifications.js";
+import { setNotificationCounter, renderAllNotificationCounters } from "../notifications/notifications.js";
 
 export const createBasketCardOptions = ({ id, price, discount, discountDetails, amount, amountTotal = 0 }) => {
 	const likeIconTemplate = document.querySelector(".like-icon");
@@ -49,6 +49,7 @@ export const createBasketCardOptions = ({ id, price, discount, discountDetails, 
 			pAmount.textContent = `Осталось ${amountTotal} шт.`;
 		}
 		const resizeCard = () => {
+			renderAllNotificationCounters();
 			if (amountTotal > 2 && window.innerWidth >= 1024) {
 				pAmount.classList.add("hide");
 			} else {
