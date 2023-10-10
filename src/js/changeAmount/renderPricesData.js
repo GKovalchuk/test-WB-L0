@@ -1,6 +1,7 @@
 import { createMaskForNumbers, setDeclension } from "../helpers.js";
 import { formData } from "../app.js";
 import { getCollapseTextData } from "../form/supplies.js";
+import { setPaymentCheckboxListener } from "../form/instansePayment.js";
 
 // получение количества нод, которые нужно обойти
 const getIds = () => {
@@ -61,12 +62,12 @@ export const renderPricesData = () => {
 	const sumPrices = findSumPrices(ids);
 	const priceFull = findPriceFull(ids);
 
-	getCollapseTextData(sumPrices, ids.length);
-
-	renderTotalPrices(sumPrices, priceFull, ids.length);
-
 	// Сборка данных о товарах и ценах в formData
 	formData.priceSum = sumPrices;
 	formData.amountSup = ids.length;
 	formData.discountSum = priceFull - sumPrices;
+
+	getCollapseTextData(sumPrices, ids.length);
+	renderTotalPrices(sumPrices, priceFull, ids.length);
+	setPaymentCheckboxListener();
 };

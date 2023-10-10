@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Главная</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20231010210638" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20231010232504" />
 </head>
 
 
@@ -302,17 +302,13 @@
 				<h4 class="sidebar-card_title--text delivery_address--method">
 					Доставка в пункт выдачи
 				</h4>
-				<img
-					data-modal="deliveryModal"
-					class="sidebar-card_title--icon"
-					src="./files/img/pencil.svg"
-					alt="edit" />
+				<img data-modal="deliveryModal" class="sidebar-card_title--icon"
+					src="./files/img/pencil.svg" alt="edit" />
 			</div>
 			<p class="caption delivery_address--text">
 				Бишкек, улица Ахматбека Суюмбаева, 12/1
 			</p>
-			<mark
-				id="shippingDate"
+			<mark id="shippingDate"
 				class="caption info_spoiler--ac-color text--ac-color">
 				5&#8211;8 фев
 			</mark>
@@ -322,8 +318,7 @@
 				<img src="./files/img/price_shipping.svg" alt="" />
 				<p class="caption">
 					Обратная доставка товаров на склад при отказе —
-					<mark
-						id="refundCost"
+					<mark id="refundCost"
 						class="caption info_spoiler text--second-at-color">
 						бесплатно
 					</mark>
@@ -335,11 +330,8 @@
 		<div class="order_item-details">
 			<div class="sidebar-card_title">
 				<h4 class="sidebar-card_title--text">Оплата картой</h4>
-				<img
-					data-modal="paymentModal"
-					class="sidebar-card_title--icon"
-					src="./files/img/pencil.svg"
-					alt="edit" />
+				<img data-modal="paymentModal" class="sidebar-card_title--icon"
+					src="./files/img/pencil.svg" alt="edit" />
 			</div>
 			<div class="card">
 	<img class="card_icon" src="./files/img/mir.svg" alt="edit" />
@@ -351,14 +343,9 @@
 
 		</div>
 		<div class="darker-field">
-			<input
-				id="orderImmediately"
-				name="orderImmediately"
-				type="checkbox"
+			<input id="instansePayment" name="instansePayment" type="checkbox"
 				class="checkbox" />
-			<label
-				class="darker-field_checkbox checkbox_label"
-				for="orderImmediately">
+			<label class="darker-field_checkbox checkbox_label" for="instansePayment">
 				<p class="caption">Списать оплату сразу</p>
 			</label>
 			<p class="caption">Спишем оплату с карты при получении</p>
@@ -366,11 +353,10 @@
 	</div>
 </div>
 <!-- конец order -->
-
 						<!-- начало submit -->
 <div class="submit">
 	<button class="btn-main" type="submit">
-		<h4>Заказать</h4>
+		<h4 id="submitText">Заказать</h4>
 	</button>
 	<div class="submit_agreement">
 		<img src="./files/img/check.svg" alt="" />
@@ -385,7 +371,6 @@
 	</div>
 </div>
 <!-- конец submit -->
-
 					</div>
 					<!-- конец basket-sidebar -->
 				</form>
@@ -766,6 +751,6 @@
 		</form>
 	</div>
 </div>
-		<script type="module" src="js/app.min.js?_v=20231010210638"></script>
+		<script type="module" src="js/app.min.js?_v=20231010232504"></script>
 	</body>
 </html>

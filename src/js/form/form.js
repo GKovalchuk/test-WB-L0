@@ -1,5 +1,6 @@
 import { validateInput, checkEmptyInput } from "./validateInput.js";
 import { formData } from "../app.js";
+import { setPaymentCheckboxListener } from './instansePayment.js';
 
 const form = document.getElementById("basketForm");
 const inputsForm = form.getElementsByTagName("input");
@@ -33,5 +34,6 @@ function handleFormSubmit(event) {
 export function formLogic() {
 	const form = document.getElementById("basketForm");
 	form.reset();
+	setPaymentCheckboxListener();
 	form.addEventListener("submit", handleFormSubmit);
 }

@@ -20,6 +20,7 @@ export const formData = {
 	priceSum: 2101063,
 	amountSup: 4,
 	discountSum: 200985,
+	instansePayment: false,
 };
 export const render = () => {
 	localData.map((cardData) => renderBasketCards(cardData));
