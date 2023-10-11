@@ -1,25 +1,25 @@
 .card {
-  display: flex;
-  align-items: center;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	width: 100%;
 }
 
 .card p {
-  height: min-content;
-  margin-left: 0.5rem;
+	height: min-content;
+	margin-left: 0.625rem;
 }
 
 .card_icon,
 .card_icon--radio {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.5rem;
-  border-radius: 0.25rem;
-  background: var(--smoky);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.875rem;
+	height: 1.5rem;
+	border-radius: 0.25rem;
+	background: var(--smoky);
 }
 
 .card_date {
-  margin-left: 0.25rem;
+	margin-left: 0.25rem;
 }

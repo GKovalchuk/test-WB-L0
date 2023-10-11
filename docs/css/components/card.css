@@ -1,37 +1,37 @@
 .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: 100%;
 }
 
 .card p {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin-left: 0.5rem;
+	height: -webkit-min-content;
+	height: -moz-min-content;
+	height: min-content;
+	margin-left: 0.625rem;
 }
 
 .card_icon,
 .card_icon--radio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 1.875rem;
-  height: 1.5rem;
-  border-radius: 0.25rem;
-  background: var(--smoky);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 1.875rem;
+	height: 1.5rem;
+	border-radius: 0.25rem;
+	background: var(--smoky);
 }
 
 .card_date {
-  margin-left: 0.25rem;
+	margin-left: 0.25rem;
 }

@@ -51,6 +51,7 @@
 	width: 1.5rem;
 	padding: 0.1667rem 0.3125rem 0.5rem 0.625rem;
 	background: none;
+	color: var(--black);
 }
 
 .counter_operator--inc {
