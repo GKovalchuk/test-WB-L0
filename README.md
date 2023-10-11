@@ -30,7 +30,7 @@ GH Repository: https://github.com/GKovalchuk/test-WB-L0
 
 #### Расстояния и размеры.
 
-1. Обрезка при прокрутке не нужна. https://disk.yandex.ru/d/27ucCMA_bYfDwg.Исправлено.
+1. Обрезка при прокрутке не нужна. https://disk.yandex.ru/d/27ucCMA_bYfDwg. Исправлено.
 2. Неточности с отступами. https://disk.yandex.ru/i/E-CasrbvO0ri2Q. Исправлено.
 
 #### Адаптивность.
