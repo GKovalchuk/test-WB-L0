@@ -8,7 +8,7 @@
           flex-direction: column;
   width: 100%;
   padding: 0.5rem 0.5rem 0.75rem;
-  gap: 0.75rem;
+  gap: 0.675rem;
   border-radius: 0.5rem;
   background: var(--smoky);
 }
@@ -21,3 +21,10 @@
   height: 1rem;
   gap: 0.5rem;
 }
+
+@media (width >= 64rem) { 
+	.darker-field {
+		gap: 0.75rem;
+	}
+}
+

@@ -13,8 +13,6 @@
 .header__bottom-border {
   /* top: calc(var(--height__header) - var(--height__header--bottom-border)); */
   display: block;
-  position: relative;
-  z-index: -1;
   width: 100%;
   height: var(--height__header--bottom-border);
   border-radius:

@@ -24,11 +24,6 @@ body {
 
 header {
   display: block;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  left: 0;
   min-width: 20rem;
   height: var(--height__header);
   background: var(--main-color);
@@ -41,7 +36,7 @@ header {
     "footer";
   grid-template-rows: 1fr var(--height__footer);
   margin: 0;
-  padding: var(--height__header) 0 var(--height__tabbar);
+  padding: 0 0 var(--height__tabbar);
 }
 
 main {

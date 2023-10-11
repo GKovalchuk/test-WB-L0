@@ -18,6 +18,10 @@
   gap: 0.625rem;
 }
 
+.white-section_title--sm {
+  margin-bottom: 0.25rem;
+}
+
 .white-section_title h3 {
   margin: 0;
 }
